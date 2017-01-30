@@ -1,0 +1,38 @@
+.project-link {
+	cursor: pointer;
+}
+
+.subhead {
+	color: #4183C4;
+	margin-top: -1em;
+}
+
+.head {
+	color: #4183C4;
+}
+
+#crunched {
+	margin: 0;
+	padding: 0;
+}
+
+#photo {
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+	top: -4em;
+	left: -20%;
+	width: 140%;
+}
+
+#crop {
+	position: relative;
+	height: 20em;
+	overflow: hidden;
+	width: 75%;
+
+}
+
+body {
+	background-color: #f2f2f2;
+}
