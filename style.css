@@ -3,16 +3,24 @@
 }
 
 .subhead {
-	color: #4183C4;
 	margin-top: -1em;
 }
 
-.head {
+#page-head {
+	margin-top: .5em;
+}
+
+.blue-text {
 	color: #4183C4;
 }
 
 #crunched {
 	margin: 0;
+	padding: 0;
+}
+
+#squished {
+	margin-bottom: 0;
 	padding: 0;
 }
 
@@ -33,6 +41,14 @@
 
 }
 
+.header-list {
+	list-style: none;
+}
+
 body {
 	background-color: #f2f2f2;
+}
+
+div.ui.vertically.divided.grid.container > div#squished > div.eight.wide.column {
+	margin-bottom: 0;
 }
