@@ -20,7 +20,7 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <ul class="header-list">
           <li><a href="https://github.com/wassona">Github</a></li>
           <li><a href="https://www.linkedin.com/in/alex-wasson-570512128">LinkedIn</a></li>
-          <li><a href="">Resume</a>
+          <li><a class="display-modal" modal-content="resume" >Resume</a>
         </ul>
       </div>
     </div>
@@ -30,8 +30,8 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <div class='ui three column stackable grid'>
 
            <div class="column" >
-            <div id="crop">
-              <img id="photo" src="alex_1024.jpg">
+            <div id="photo-frame">
+              <img id="photo" src="alex_1024_cropped.jpg">
             </div>
           </div>
 
@@ -87,37 +87,37 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <div class="ui four column padded doubling grid">
           
 
-          <div href="/discendo.html" class="red column project-link">
+          <div href="/discendo.html" class="red column display-modal">
             <h3>discendo</h3>
             <p>Rapid web form creation and dissemination</p>
           </div>
 
-          <div href="/wikly.html" class="orange column project-link">
+          <div href="/wikly.html" class="orange column display-modal">
             <h3>Wikly</h3>
             <p>Weekly calendar app</p>
           </div>
 
-          <div href="/shipping.html" class="yellow column project-link">
+          <div href="/shipping.html" class="yellow column display-modal">
             <h3>Shipping Project</h3>
             <p>A shipping management tool, built to practice implementing various backend technologies</p>
           </div>
 
-          <div href="/blogz.html" class="olive column project-link">
+          <div href="/blogz.html" class="olive column display-modal">
             <h3>blogz</h3>
             <p>Sinatra based micro-blogging app</p>
           </div>
 
-          <div href="/wof.html" class="green column project-link">
+          <div href="/wof.html" class="green column display-modal">
             <h3>WoF</h3>
             <p>Front end game based on a popular game show</p>
           </div>
 
-          <div href="/solitaire.html" class="teal column project-link">
+          <div href="/solitaire.html" class="teal column display-modal">
             <h3>Solitaire</h3>
             <p>An implementation of the Beleaguered Castle variant of Solitaire</p>
           </div>
 
-          <div href="/clock/index.html" class="blue column project-link">
+          <div href="/clock/index.html" class="blue column display-modal" modal-content="clock">
             <h3>Hex Clock</h3>
             <p>A simple but attractive clock app</p>
           </div>
@@ -129,12 +129,17 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
 
 
   </div>
-  <div id="shade" class="invisible">
+
+
+  <div id="shade" class="close invisible">
     <div class="ui raised segment" id="modal">
       <div class="modal-content">
         <h3>My Resume</h3>
         <a href="./Resume1.pdf">Full Screen</a>
         <embed src="./Resume1.pdf"></embed>
+      </div>
+      <div id="modal-close-button" class="close ui icon button">
+        <i class="close icon"></i>
       </div>
     </div>
   </div>
@@ -145,10 +150,20 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
 
   <div class="invisible">
 
-    <div class="modal-content">
+    <div id="modal-content-resume" class="modal-content">
         <h3>My Resume</h3>
         <a href="./Resume1.pdf">Full Screen</a>
         <embed src="./Resume1.pdf"></embed>
+    </div>
+
+    <div id="modal-content-clock" class="modal-content">
+        <h3>Hex Clock</h3>
+        <h4>A simple but attractive clock app</h4>
+        <p>This project displays the current time in the center of the screen, formatted to look like a hex color code. The background color changes with the time, though it interprets the time code as a full range rather than the limited set of colors that a literal interpretation would provide. As the background color changes, the text and line colors also change to complement the background.</p>
+        <p>By default, the hour corresponds to the red value, the minute corresponds to the green value, and the second corresponds to the blue value. These defaults can be switched with the drag and drop option cards below the clock itself, though this feature does not work in the embedded version.</p>
+        <a href="./clock/index.html">Click here to open in full screen</a><br/>
+        <a href="https://github.com/wassona/clock">Click here for the Github Repo</a>        
+        <embed src="./clock/index.html"></embed>
     </div>
 
 
