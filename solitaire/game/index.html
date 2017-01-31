@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beleaguered Castle Solitaire</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<section id="table">
+		<div class="tableau" id="t1" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="space"></div>
+		<div class="foundation" id="f1" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="tableau" id="t2" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="space"></div>
+		<div class="tableau" id="t3" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="space"></div>
+		<div class="foundation" id="f2" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="tableau" id="t4" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="space"></div>
+		<div class="tableau" id="t5" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="space"></div>
+		<div class="foundation" id="f3" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="tableau" id="t6" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="space"></div>
+		<div class="tableau" id="t7" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="space"></div>
+		<div class="foundation" id="f4" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="tableau" id="t8" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+		<div class="space"></div>
+	</section>
+	<button id="start" onclick="start()">Start!</button>
+	<button id="rules" onclick="show()">Rules!</button>
+
+	<div id="mask">
+		<div id="modal">
+			<h1>Welcome to Beleaguered Castle!</h1>
+			<h2>About</h2>
+			<p>Technically, solitaire is an entire genre of single player games. The most common form of card solitaire is Klondike. Beleaguered Castle is solitaire, but it's not Klondike.</p>
+			<img src="../docs/layout.jpg">
+			<h2>Rules</h2>
+			<p>The rules for Beleaguered Castle are relatively simple. The Aces start play alone on the four <em>foundations</em> in the center of the play area. The remaining cards are dealt out face up in stacks of six to the eight <em>tableaus</em>. The goal is to build up each suit from the Ace to the King on the four <em>foundations</em>. Only a card that is of the same suit and that is next in sequence may be played on a foundation. Cards may also be moved from the top of any <em>tableau</em> onto another <em>tableau</em> if the moving card is one down in sequence from the card it is being moved onto, regardless of suit.</p>
+			<button onclick="hide()">Close Window</button>
+		</div>
+	</div>
+
+</body>
+</html>
