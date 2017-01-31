@@ -68,7 +68,7 @@ div.ui.vertically.divided.grid.container > div#squished > div.eight.wide.column 
 	background-color: #fafafa;
 }
 
-#modal-content {
+.modal-content {
 	width: 80%;
 	margin: 5% auto;
 	text-align: center;
@@ -76,7 +76,7 @@ div.ui.vertically.divided.grid.container > div#squished > div.eight.wide.column 
 
 embed {
 	width: 100%;
-	height: auto;
+	height: 60vh;
 }
 
 #shade {
