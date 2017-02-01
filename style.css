@@ -114,3 +114,9 @@ embed {
 	z-index: 1;
 	box-shadow: 0 0 5px 5px rgba(128,128,128,.3);
 }
+
+.screenshot {
+	width: 80%;
+	height: auto;
+	border: 1px solid black;
+}

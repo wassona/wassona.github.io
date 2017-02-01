@@ -97,17 +97,17 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
             <p>Weekly calendar app</p>
           </div>
 
-          <div href="/shipping.html" class="yellow column display-modal">
+          <div href="/shipping.html" class="yellow column display-modal" modal-content="shipping">
             <h3>Shipping Project</h3>
-            <p>A shipping management tool, built to practice implementing various backend technologies</p>
+            <p>A shipping management tool, built to practice implementing various back-end technologies</p>
           </div>
 
-          <div href="/blogz.html" class="olive column display-modal">
+          <div href="/blogz.html" class="olive column display-modal" modal-content="blogz">
             <h3>blogz</h3>
-            <p>Sinatra based micro-blogging app</p>
+            <p>A Sinatra based micro-blogging app</p>
           </div>
 
-          <div href="/wof.html" class="green column display-modal">
+          <div href="/wof.html" class="green column display-modal" modal-content="wof">
             <h3>WoF</h3>
             <p>Front end game based on a popular game show</p>
           </div>
@@ -154,6 +154,42 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <h3>My Resume</h3>
         <a href="./Resume1.pdf">Full Screen</a>
         <embed src="./Resume1.pdf"></embed>
+    </div>
+
+    <div id="modal-content-shipping" class="modal-content">
+        <h3>Shipping Project</h3>
+        <h4>A shipping management tool, built to practice implementing various back-end technologies</h4>
+        <p>In this project, I tried out a few different Rails helpers and plug-ins. From the main job management page, most actions result in a call processed by UJS and AJAX, so that only part of the page is reloaded. I also used Devise to implement secure user management and Paperclip to handle uploading and pulling files.</p>
+        <p>Although the project has a lot of features and a fairly complex database schema, I didn't really get around to doing any but the most basic front-end styling.</p>
+        <p>If you'd like to check it out but don't want to make your own account, log in with the email <strong>user@email.com</strong> and the password <strong>password</strong>.</p>
+        <a href="https://agile-harbor-50391.herokuapp.com/">Click here to go to the site.</a><br/>
+        <a href="https://github.com/wassona/Shipping-Project">Click here for the Github Repo</a>
+
+
+    </div>
+
+    <div id="modal-content-blogz" class="modal-content">
+        <h3>blogz</h3>
+        <h4>Sinatra based micro-blogging app</h4>
+        <p>blogz is a blogging app built on a Sinatra back-end and styled with Semantic UI. Users can create and edit posts and can also follow each other, though that doesn't really do much.</p>
+        <p>Although I built out several back-end apps before this, this was the first one I spent much time styling, and also was my first time using a front end framework. I liked the Semantic UI styling of the blog posts so much that reused them on this site.</p>
+        <p>If you'd like to check it out but don't want to make your own account, log in with the username <strong>user</strong> and the password <strong>password</strong>.</p>
+        <a href="https://blooming-dawn-73272.herokuapp.com/">Click here to go to the site.</a><br/>
+        <a href="https://github.com/wassona/blogz">Click here for the Github Repo</a>
+        <img class="screenshot" src="blogz.png"/>       
+
+    </div>
+
+
+    <div id="modal-content-wof" class="modal-content">
+        <h3>WoF</h3>
+        <h4>Front end game based on a popular game show</h4>
+        <p>This project simulates a round of a popular 3 player game show. Although there are a lot of features I haven't yet implemented, I'm pretty happy with how it turned out.</p>
+        <p>The "Sorry, that doesn't work yet. Try again" message indicates that your spin landed on a wheel section that hasn't been implemented yet. Just spin the wheel again to keep going.</p>
+        <a href="./wof/index.html">Click here to open in full screen</a><br/>
+        <a href="https://github.com/wassona/WoF">Click here for the Github Repo</a>
+        <img class="screenshot" src="WoF.png"/>              
+
     </div>
 
     <div id="modal-content-solitaire" class="modal-content">
