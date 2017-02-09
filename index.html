@@ -55,48 +55,21 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
           <div class="column"><div class="ui raised segment">
             <h3 class="head">discendo</h3>
             <div class="segment-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>discendo, Latin for 'for learning', </p>
             </div>
           </div></div>
           <div class="column"><div class="ui raised segment">
             <h3 class="head"><a href="https://guarded-atoll-54755.herokuapp.com/">Wikly</a></h3>
             <div class="segment-content">
               <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
+              <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a>
+
+              
+              <h6>Calendar Screen</h6>
+              <img class="segment-picture" src="wikly_calendar.png" />
+              <h6>Event Creation Screen</h6>
+              <img class="segment-picture" src="wikly_create.png" />
+
             </div>
           </div></div>
         </div>
@@ -109,14 +82,19 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <div class="ui four column padded doubling grid">
           
 
-          <div href="/discendo.html" class="red column display-modal">
+          <div href="/discendo.html" class="purple column display-modal" modal-content="discendo">
             <h3>discendo</h3>
             <p>Rapid, user-friendly web form creation and dissemination</p>
           </div>
 
-          <div href="/wikly.html" class="orange column display-modal">
+          <div href="/wikly.html" class="red column display-modal" modal-content="wikly">
             <h3>Wikly</h3>
             <p>Weekly calendar app</p>
+          </div>
+
+          <div class="orange column display-modal" modal-content="housing-insights">
+            <h3>Housing Insights Project</h3>
+            <p>Web platform designed to centralize and display affordable housing data</p>
           </div>
 
           <div href="/shipping.html" class="yellow column display-modal" modal-content="shipping">
@@ -176,6 +154,50 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <h3>My Resume</h3>
         <a href="./Resume1.pdf">Full Screen</a>
         <embed src="./Resume1.pdf"></embed>
+    </div>
+
+
+    <div id="modal-content-discendo" class="modal-content">
+        <h3>Wikly</h3>
+        <h4>Weekly calendar app</h4>
+        <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
+        <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a>
+
+        
+        <h6>Calendar Screen</h6>
+        <img class="segment-picture" src="wikly_calendar.png" />
+        <h6>Event Creation Screen</h6>
+        <img class="segment-picture" src="wikly_create.png" />
+
+    </div>
+
+
+    <div id="modal-content-wikly" class="modal-content">
+        <h3>Wikly</h3>
+        <h4>Weekly calendar app</h4>
+        <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
+        <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a>
+
+        
+        <h6>Calendar Screen</h6>
+        <img class="segment-picture" src="wikly_calendar.png" />
+        <h6>Event Creation Screen</h6>
+        <img class="segment-picture" src="wikly_create.png" />
+
+    </div>
+
+    <div id="modal-content-housing-insights" class="modal-content">
+        <h3>Wikly</h3>
+        <h4>Weekly calendar app</h4>
+        <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
+        <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a>
+
+        
+        <h6>Calendar Screen</h6>
+        <img class="segment-picture" src="wikly_calendar.png" />
+        <h6>Event Creation Screen</h6>
+        <img class="segment-picture" src="wikly_create.png" />
+
     </div>
 
     <div id="modal-content-shipping" class="modal-content">

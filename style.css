@@ -129,3 +129,13 @@ embed {
 a:hover {
 	text-decoration: underline;
 }
+
+.segment-picture {
+	width: 98%;
+	border: 1px solid black;
+}
+
+h6 {
+	text-align: center;
+	margin-top: 0;
+}
