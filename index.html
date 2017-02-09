@@ -20,7 +20,7 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <ul class="header-list">
           <li><a href="https://github.com/wassona">Github</a></li>
           <li><a href="https://www.linkedin.com/in/alex-wasson-570512128">LinkedIn</a></li>
-          <li><a class="display-modal" modal-content="resume" >Resume</a>
+          <li><a class="display-modal" data-modal-content="resume" >Resume</a>
         </ul>
       </div>
     </div>
@@ -53,21 +53,28 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
       <div class="row">
         <div class="ui two column stackable grid">
           <div class="column"><div class="ui raised segment">
-            <h3 class="head">discendo</h3>
+            <h3 class="head"><a href="https://discendo.herokuapp.com">discendo</a></h3>
             <div class="segment-content">
-              <p>discendo, Latin for 'for learning', </p>
+              <p>discendo, from the Latin meaning 'for learning', grew out of my own frustrations with learning management systems, and especially systems for creating and administering online assignments. Although there are a few good systems out there, none of them seem to take into account the facts that most teachers already have dozens, if not hundreds, of carefully crafted and formatted assignments and that the one thing teachers never have enough of is time. discendo allows a user with very basic computer skills to upload a pdf, mark it up in a WYSIWYG editor, and publish the assignment as a web form in just a few minutes.</p>
+              <p>Although the assignment tool is the key feature of discendo, the app also includes a broad set of LMS features. An instructor can sort students into classes, give assignments to those classes, track assignment completion, and view class-wide and individual results. Students can search for and join classes, view all assignments or sort them by class, complete assignments, and view their results.</p>
+              <h5>Try it out!</h5>
+              <p>discendo is being hosted <a href="https://discendo.herokuapp.com">here.</a> You can create your own account or use my test account: email: wasson@wasson.com, password: password.</p>
+              <h5>Technical Details</h5>
+              <p>The app is built on a Rails backend, with hashed and salted password storage through Devise, Paperclip based image upload and conversion, AWS image hosting, with a Postgres database running on Heroku, and front-end styling with Google's Material Design Light framework.</p>
+              <h5>The Assignment Creation Process</h5>
+              <p>When the user uploads a pdf, the Paperclip gem, using ImageMagick settings configured to carefully balance storage size with image clarity, converts it to a png image file and saves it to Amazon Web Services. The user is taken to another page where the file is displayed. The user can click on the image to highlight individual questions, and can resize or remove their highlights. Once the user is satisfied, they can submit their assignment. discendo bundles the image together with its name, creator information, and a JSON string that contains the information necessary to reconstitute the highlighted sections. A student can then take the assignment, clicking on the highlighted sections to reveal form inputs, with results that, when submitted, are immediately available to the instructor.</p>
             </div>
           </div></div>
           <div class="column"><div class="ui raised segment">
             <h3 class="head"><a href="https://guarded-atoll-54755.herokuapp.com/">Wikly</a></h3>
             <div class="segment-content">
               <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
-              <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a>
+              <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a></p>
 
               
-              <h6>Calendar Screen</h6>
+              <h5>Calendar Screen</h5>
               <img class="segment-picture" src="wikly_calendar.png" />
-              <h6>Event Creation Screen</h6>
+              <h5>Event Creation Screen</h5>
               <img class="segment-picture" src="wikly_create.png" />
 
             </div>
@@ -82,42 +89,42 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <div class="ui four column padded doubling grid">
           
 
-          <div href="/discendo.html" class="purple column display-modal" modal-content="discendo">
+          <div href="/discendo.html" class="purple column display-modal" data-modal-content="discendo">
             <h3>discendo</h3>
             <p>Rapid, user-friendly web form creation and dissemination</p>
           </div>
 
-          <div href="/wikly.html" class="red column display-modal" modal-content="wikly">
+          <div href="/wikly.html" class="red column display-modal" data-modal-content="wikly">
             <h3>Wikly</h3>
             <p>Weekly calendar app</p>
           </div>
 
-          <div class="orange column display-modal" modal-content="housing-insights">
+          <div class="orange column display-modal" data-modal-content="housing-insights">
             <h3>Housing Insights Project</h3>
             <p>Web platform designed to centralize and display affordable housing data</p>
           </div>
 
-          <div href="/shipping.html" class="yellow column display-modal" modal-content="shipping">
+          <div href="/shipping.html" class="yellow column display-modal" data-modal-content="shipping">
             <h3>Shipping Project</h3>
             <p>A shipping management tool, built to practice implementing various back-end technologies</p>
           </div>
 
-          <div href="/blogz.html" class="olive column display-modal" modal-content="blogz">
+          <div href="/blogz.html" class="olive column display-modal" data-modal-content="blogz">
             <h3>blogz</h3>
             <p>A Sinatra based micro-blogging app</p>
           </div>
 
-          <div href="/wof.html" class="green column display-modal" modal-content="wof">
+          <div href="/wof.html" class="green column display-modal" data-modal-content="wof">
             <h3>WoF</h3>
             <p>Front end game based on a popular game show</p>
           </div>
 
-          <div href="/solitaire.html" class="teal column display-modal" modal-content="solitaire">
+          <div href="/solitaire.html" class="teal column display-modal" data-modal-content="solitaire">
             <h3>Solitaire</h3>
             <p>An implementation of the Beleaguered Castle variant of Solitaire</p>
           </div>
 
-          <div href="/clock/index.html" class="blue column display-modal" modal-content="clock">
+          <div href="/clock/index.html" class="blue column display-modal" data-modal-content="clock">
             <h3>Hex Clock</h3>
             <p>A simple but attractive clock app</p>
           </div>
@@ -133,10 +140,10 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
 
   <div id="shade" class="close invisible">
     <div class="ui raised segment" id="modal">
-      <div class="modal-content">
-        <h3>My Resume</h3>
-        <a href="./Resume1.pdf">Full Screen</a>
-        <embed src="./Resume1.pdf"></embed>
+      <div id="content-resume">
+          <h3>My Resume</h3>
+          <a href="./Resume1.pdf">Full Screen</a>
+          <embed src="./Resume1.pdf"></embed>
       </div>
       <div id="modal-close-button" class="close ui icon button">
         <i class="close icon"></i>
@@ -151,56 +158,56 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
   <div class="invisible">
 
     <div id="modal-content-resume" class="modal-content">
-        <h3>My Resume</h3>
-        <a href="./Resume1.pdf">Full Screen</a>
-        <embed src="./Resume1.pdf"></embed>
+      
     </div>
 
 
-    <div id="modal-content-discendo" class="modal-content">
+    <div id="modal-content-discendo">
+      <div id="content-discendo" class="modal-content">
+          <h3>discendo</h3>
+          <p>discendo, from the Latin meaning 'for learning', grew out of my own frustrations with learning management systems, and especially systems for creating and administering online assignments. Although there are a few good systems out there, none of them seem to take into account the facts that most teachers already have dozens, if not hundreds, of carefully crafted and formatted assignments and that the one thing teachers never have enough of is time. discendo allows a user with very basic computer skills to upload a pdf, mark it up in a WYSIWYG editor, and publish the assignment as a web form in just a few minutes.</p>
+          <p>Although the assignment tool is the key feature of discendo, the app also includes a broad set of LMS features. An instructor can sort students into classes, give assignments to those classes, track assignment completion, and view class-wide and individual results. Students can search for and join classes, view all assignments or sort them by class, complete assignments, and view their results.</p>
+          <h5>Try it out!</h5>
+          <p>discendo is being hosted <a href="https://discendo.herokuapp.com">here.</a> You can create your own account or use my test account: email: wasson@wasson.com, password: password.</p>
+          <h5>Technical Details</h5>
+          <p>The app is built on a Rails backend, with hashed and salted password storage through Devise, Paperclip based image upload and conversion, AWS image hosting, with a Postgres database running on Heroku, and front-end styling with Google's Material Design Light framework.</p>
+          <h5>The Assignment Creation Process</h5>
+          <p>When the user uploads a pdf, the Paperclip gem, using ImageMagick settings configured to carefully balance storage size with image clarity, converts it to a png image file and saves it to Amazon Web Services. The user is taken to another page where the file is displayed. The user can click on the image to highlight individual questions, and can resize or remove their highlights. Once the user is satisfied, they can submit their assignment. discendo bundles the image together with its name, creator information, and a JSON string that contains the information necessary to reconstitute the highlighted sections. A student can then take the assignment, clicking on the highlighted sections to reveal form inputs, with results that, when submitted, are immediately available to the instructor.</p>
+      </div>
+    </div>
+
+
+    <div id="modal-content-wikly">
+      <div id="content-wikly" class="modal-content">
         <h3>Wikly</h3>
         <h4>Weekly calendar app</h4>
         <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
-        <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a>
+        <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a></p>
 
         
-        <h6>Calendar Screen</h6>
+        <h5>Calendar Screen</h5>
         <img class="segment-picture" src="wikly_calendar.png" />
-        <h6>Event Creation Screen</h6>
+        <h5>Event Creation Screen</h5>
         <img class="segment-picture" src="wikly_create.png" />
-
+      </div>
     </div>
 
+    <div id="modal-content-housing-insights">
+      <div id="content-housing-insights" class="modal-content">
+        <h3>Housing Insights Project</h3>
+        <h4>Web platform designed to centralize and display subsidized housing data</h4>
+        <p>The Housing Insights Project is a collaborative effort between Code For DC and the DC government to create a tool that government officials and other subsidized housing stakeholders can use to access and understand data about subsidized housing in order to work more effectively to preserve the dwindling supply of affordable housing in the District.</p>
+        <p>Ultimately, the project aims to create a web site for accessing and presenting data. I work with the D3 team, creating visualization tools so that stakeholders can more quickly and effectively make decisions on how to allot resources.  <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a></p>
 
-    <div id="modal-content-wikly" class="modal-content">
-        <h3>Wikly</h3>
-        <h4>Weekly calendar app</h4>
-        <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
-        <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a>
-
-        
-        <h6>Calendar Screen</h6>
-        <img class="segment-picture" src="wikly_calendar.png" />
-        <h6>Event Creation Screen</h6>
-        <img class="segment-picture" src="wikly_create.png" />
-
+        <ul id = "metric_menu">
+          <h1>Metrics</h1>
+        </ul>
+        <div id="chart-0" class="d3-chart"></div>
+      </div>
     </div>
 
-    <div id="modal-content-housing-insights" class="modal-content">
-        <h3>Wikly</h3>
-        <h4>Weekly calendar app</h4>
-        <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
-        <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a>
-
-        
-        <h6>Calendar Screen</h6>
-        <img class="segment-picture" src="wikly_calendar.png" />
-        <h6>Event Creation Screen</h6>
-        <img class="segment-picture" src="wikly_create.png" />
-
-    </div>
-
-    <div id="modal-content-shipping" class="modal-content">
+    <div id="modal-content-shipping">
+      <div id="content-shipping" class="modal-content">
         <h3>Shipping Project</h3>
         <h4>A shipping management tool, built to practice implementing various back-end technologies</h4>
         <p>In this project, I tried out a few different Rails helpers and plug-ins. From the main job management page, most actions result in a call processed by UJS and AJAX, so that only part of the page is reloaded. I also used Devise to implement secure user management and Paperclip to handle uploading and pulling files.</p>
@@ -209,10 +216,11 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <a href="https://agile-harbor-50391.herokuapp.com/">Click here to go to the site.</a><br/>
         <a href="https://github.com/wassona/Shipping-Project">Click here for the Github Repo</a>
 
-
+      </div>
     </div>
 
-    <div id="modal-content-blogz" class="modal-content">
+    <div id="modal-content-blogz">
+      <div id="content-blogz" class="modal-content">
         <h3>blogz</h3>
         <h4>Sinatra based micro-blogging app</h4>
         <p>blogz is a blogging app built on a Sinatra back-end and styled with Semantic UI. Users can create and edit posts and can also follow each other, though that doesn't really do much.</p>
@@ -221,11 +229,12 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <a href="https://blooming-dawn-73272.herokuapp.com/">Click here to go to the site.</a><br/>
         <a href="https://github.com/wassona/blogz">Click here for the Github Repo</a>
         <img class="screenshot" src="blogz.png"/>       
-
+      </div>
     </div>
 
 
-    <div id="modal-content-wof" class="modal-content">
+    <div id="modal-content-wof">
+      <div id="content-wof" class="modal-content">
         <h3>WoF</h3>
         <h4>Front end game based on a popular game show</h4>
         <p>This project simulates a round of a popular 3 player game show. Although there are a lot of features I haven't yet implemented, I'm pretty happy with how it turned out.</p>
@@ -233,10 +242,11 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <a href="./wof/index.html">Click here to open in full screen</a><br/>
         <a href="https://github.com/wassona/WoF">Click here for the Github Repo</a>
         <img class="screenshot" src="WoF.png"/>              
-
+      </div>
     </div>
 
-    <div id="modal-content-solitaire" class="modal-content">
+    <div id="modal-content-solitaire">
+      <div id="content-solitaire" class="modal-content">
         <h3>Solitaire</h3>
         <h4>An implementation of the Beleaguered Castle variant of Solitaire</h4>
         <p>This project uses JavaScript and CSS to create a web native version of Beleaguered Castle, a Solitaire variant. If you'd like to play but don't know how, fear not! The rules are included.</p>
@@ -244,10 +254,11 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <p> Shortly afterwards, I was given an assignment in a class to create a timed modal element. Displaying a ruleset for my Solitaire game seemed like an ideal application, so that's the version on display here. I have not yet made it mobile responsive.</p>
         <a href="./solitaire/game/index.html">Click here to open in full screen</a><br/>
         <a href="https://github.com/wassona/solitaire">Click here for the Github Repo</a>        
-
+      </div>
     </div>
 
-    <div id="modal-content-clock" class="modal-content">
+    <div id="modal-content-clock">
+      <div id="content-clock" class="modal-content">
         <h3>Hex Clock</h3>
         <h4>A simple but attractive clock app</h4>
         <p>This project displays the current time in the center of the screen, formatted to look like a hex color code. The background color changes with the time, though it interprets the time code as a full range rather than the limited set of colors that a literal interpretation would provide. As the background color changes, the text and line colors also change to complement the background.</p>
@@ -255,6 +266,7 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <a href="./clock/index.html">Click here to open in full screen</a><br/>
         <a href="https://github.com/wassona/clock">Click here for the Github Repo</a>        
         <embed src="./clock/index.html"></embed>
+      </div>
     </div>
 
 
@@ -264,5 +276,8 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
 
 
   <script type="text/javascript" src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.4.1/d3.min.js"></script>
+  <script src="/js/d3-tip.js"></script>
+  <script src="/js/prototype-1a.js"></script>
 </body>
 </html>

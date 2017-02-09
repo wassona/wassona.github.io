@@ -4,13 +4,22 @@ document.querySelectorAll('.display-modal').forEach(function(el){
 
 function displayModal(e){
 	let modal = document.querySelector('#modal'),
+		modalContentName = e.currentTarget.getAttribute('data-modal-content'),
 		currentContent = modal.children[0],
-		modalContentName = e.currentTarget.getAttribute('modal-content'),
-		modalContent = document.querySelector('#modal-content-'+ modalContentName).cloneNode(true);
+		currentContainer = document.querySelector('#modal-' + currentContent.id);
 
-	modal.insertBefore(modalContent, currentContent);
-	currentContent.remove();
-	document.querySelector('#shade').className = "close";
+	if (document.querySelector('#modal-content-'+ modalContentName).children[0]){
+		let modalContent = document.querySelector('#modal-content-'+ modalContentName).children[0];
+
+
+		modal.insertBefore(modalContent, currentContent);
+		if(currentContainer) {
+			currentContainer.append(currentContent);
+		}
+		document.querySelector('#shade').className = "close";
+	} else {
+		document.querySelector('#shade').className = "close";
+	}
 
 }
 
