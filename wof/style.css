@@ -1,0 +1,128 @@
+body {
+	font-family: Helvetica;
+	background-color: #f7f7f7;
+}
+
+h1 {
+	margin: 0px;
+}
+
+header {
+	text-align: center;
+}
+
+.letterSpace {
+	display: inline-block;
+	width: 4.1vw;
+	height: 14vh;
+	border:.05vw dashed black;
+	background-color: aqua;
+	text-align: center;
+	vertical-align: top;
+	line-height: 2em;
+	font-size: 2em;
+	font-family: Arial;
+	font-weight: bolder;
+
+}
+
+#wrapper {
+	position: relative;
+	right: 10vw;
+	height: 60vh;
+	width: 60vw;
+	margin: 0 auto;
+	border: 3px solid aquamarine;
+	background-color: teal;
+}
+
+#letter0, #letter13, #letter42, #letter55 {
+	background-color: transparent;
+}
+
+#playSpace {
+	position: relative;
+	right: 10vw;
+	height: 20vh;
+	width: 40vw;
+	margin: 0 auto;
+	border: 1px solid black;
+	text-align: center;
+	line-height: 2em;
+}
+
+input {
+	text-align: center;
+}
+
+#display {
+	position: absolute;
+	left: 5px;
+	top: 10vh;
+	width: 8.5vw;
+	height: 30vh;
+	background-color: lightblue;
+}
+
+#playerOne {
+	position: absolute;
+	left: 5px;
+	top: 42vh;
+	width: 8.5vw;
+	height: 15vh;
+	background-color: #fc7667;
+}
+
+#playerTwo {
+	position: absolute;
+	left: 5px;
+	top: 59vh;
+	width: 8.5vw;
+	height: 15vh;
+	background-color: #fcf267;
+}
+
+#playerThree {
+	position: absolute;
+	left: 5px;
+	top: 77vh;
+	width: 8.5vw;
+	height: 15vh;
+	background-color: #7a7ef9;
+	/*border-top: 3px solid red;
+	border-bottom: 3px solid red;*/
+}
+
+#wheel2 {
+	position: absolute;
+	top: -25vh;
+	right: -110vh;
+	height: 150vh;
+	width: 150vh;
+	border: 1px solid gold;
+	border-radius: 100vh;
+	overflow: hidden;
+	background-image: url('assets/Wheel_Round_1.png');
+	transition: transform 4s cubic-bezier(0.17, -0.12, 0.27, 0.98);
+	background-size: cover;
+}
+
+#pointer {
+	position: absolute;
+    top: 45vh;
+    right: 36vh;
+    border-top: 6vh solid transparent;
+    border-bottom: 6vh solid transparent;
+    border-left: 18vh solid yellow;
+    transition: transform .1s;
+}
+
+#inner {
+	position: absolute;
+    top: 46vh;
+    right: 38vh;
+    border-top: 5vh solid transparent;
+    border-bottom: 5vh solid transparent;
+    border-left: 15vh solid red;
+    transition: transform .1s;
+}

@@ -1,0 +1,90 @@
+#wheel {
+	position: absolute;
+	top: 30vh;
+	left: 30vw;
+	height: 30vh;
+	width: 30vh;
+	border: 1px solid gold;
+	border-radius: 100vh;
+	overflow: hidden;
+	transition: transform 2s;
+}
+
+#wheel2 {
+	position: absolute;
+	top: 30vh;
+	left: 20vw;
+	height: 50vh;
+	width: 50vh;
+	border: 1px solid gold;
+	border-radius: 100vh;
+	overflow: hidden;
+	transition: transform 4s cubic-bezier(0.17, -0.12, 0.27, 0.98);
+	background-image: url('../assets/Wheel_Round_1.png');
+	background-size: cover;
+}
+
+#box {
+	border: 1px solid black;
+	height: 100px;
+	width: 100px;
+}
+
+#left {
+	border-top: 49% solid transparent;
+	border-right: 49% solid transparent;
+	border-bottom: 49% solid orange;
+	border-left: 49% solid orange;
+}
+
+
+.one {
+	display: inline-block;
+	width: 50%;
+	height: 50%;
+	margin: 0;
+	padding: 0;
+}
+
+#ul {
+	background-color: blue;
+}
+
+#ulb {
+	border-top: 15vh solid transparent;
+	border-right: 15vh solid transparent;
+	border-bottom: 15vh solid orange;
+	border-left: 15vh solid orange;	
+}
+
+#ur {
+	background-color: red;
+}
+
+#ll {
+	margin-top: -.7vh;
+	background-color: yellow;
+}
+
+#lr {
+	margin-top: -.7vh;
+	background-color: green;
+}
+
+#wheel:hover {
+	transform: rotate(180deg);
+}
+
+#wheel2:hover {
+	transition: transform 4s cubic-bezier(0.17, -0.12, 0.27, 0.98);
+	transform: rotate(1280deg);
+}
+
+#pointer {
+	position: absolute;
+	right: 15vh;
+	top: 40vh;
+	border-top: 15vh solid transparent;
+	border-bottom: 15vh solid transparent;
+	border-left: 15vh solid red;
+}
