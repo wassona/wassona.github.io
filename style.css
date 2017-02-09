@@ -120,3 +120,12 @@ embed {
 	height: auto;
 	border: 1px solid black;
 }
+
+.segment-content {
+	height: 466px;
+	overflow: scroll;
+}
+
+a:hover {
+	text-decoration: underline;
+}
