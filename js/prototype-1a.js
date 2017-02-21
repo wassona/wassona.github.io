@@ -43,7 +43,7 @@
             chart.svg = d3.select(el) // select elem (div#chart-0)
                 .append('svg')        // append svg element 
                 .attr('width', 100 + '%')   // d3 v4 requires setting attributes one at a time. no native support for setting attr or style with objects as in v3. this library would make it possible: mini library D3-selection-mult
-                .attr('height', 200); // SVG object dimensions are hard-coded now, but it may be 
+                .attr('height', 170); // SVG object dimensions are hard-coded now, but it may be 
                                       // useful to set these as, say, a parameter in constructors that
                                       // inherit from Chart.
 
@@ -130,7 +130,7 @@
                 .attr('value', chart.minValue) // start the slider at min, to facilitate redrawing
                 .attr('step', '.01')      // .01 is kind of a magic number and probably should be made responsive to the data
                 .style('margin-top', '1em') // these two style elements are pretty arbitrary
-                .style('width', '40%');
+                .style('width', '100%');
 
             chart.slider.on('mousedown', function(){ // this anonymous function wraps
                      chart.sliderAction(field);  // another function in order to pass a
