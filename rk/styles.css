@@ -1,0 +1,134 @@
+.main-container {
+	display: flex;
+	font-family: helvetica;
+	margin: 120px auto;
+}
+
+.board-container {
+	display: inline-block;
+	width: 300px;
+	margin: 0 auto;
+}
+
+.command-container {
+	display: inline-block;
+	width: 30%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 20px;
+	height: auto;
+	position: relative;
+}
+
+h2, h3 {
+	margin: 0 0 20px;
+	text-align: center;
+}
+
+.command {
+	border-bottom: 2px solid black;
+	margin-top: 10px;
+	font-size: 24px;
+	font-family: monospace;
+	text-align: center;
+}
+
+.command:focus {
+	outline: none;
+}
+
+.add-line {
+	font-size: 20px;
+	margin: 10px auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+.go-btn {
+	margin-top: 20px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 24px;
+	padding: 10px;
+	border-radius: 20px;
+	border: 2px solid darkgreen;
+	background-color: lightgreen;
+	color: #fff;
+}
+
+.command-list-container {
+	position: absolute;
+	bottom: -80px;
+	left: 0;
+	width: 100%;
+}
+
+.row {
+	display: inline-flex;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	/*display: inline-block;*/
+}
+
+.row:not(first-of-type) {
+	margin-top: -4px;
+}
+
+.space {
+	display: inline;
+}
+
+.offset-2 {
+	margin-left: 154px;
+}
+
+.row:first-of-type {
+	border-top: 2px solid black;
+}
+
+.square {
+	width: 75px;
+	height: 75px;
+	display: inline-block;
+	border-left: 2px solid black;
+	border-right: 1px solid black;
+}
+
+.square ~ .square {
+	border-left: 1px solid black;
+}
+
+
+.square:last-of-type {
+	border-right: 2px solid black;
+}
+
+
+.robot, .kitty, .river, .mountain {
+	display: block;
+	width: 75px;
+	height: 75px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.robot {
+	background-image: url('robot.png');
+	background-size: 65% 80%;
+	position: relative;
+	transition: all 2s;
+	left: 0px;
+	top: 0px;
+}
+
+.kitty {
+	background-image: url('kitty.png');
+	background-size: 90% 80%;
+}
+
+.mountain {
+	background-image: url("mountain.png");
+}
+
+.river {
+	background-image: url("river.png");
+}
