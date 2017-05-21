@@ -19,9 +19,9 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
       </div>
       <div class="eight wide right aligned column">
         <ul class="header-list">
-          <li><a href="https://github.com/wassona">Github</a></li>
-          <li><a href="https://www.linkedin.com/in/alex-wasson-570512128">LinkedIn</a></li>
-          <li><a class="display-modal" data-modal-content="resume" >Resume</a>
+          <li><a target="_blank" href="https://github.com/wassona">Github</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/alex-wasson-570512128">LinkedIn</a></li>
+          <li><a target="_blank" class="display-modal" data-modal-content="resume" >Resume</a>
         </ul>
       </div>
     </div>
@@ -54,24 +54,49 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
       <div class="row">
         <div class="ui two column stackable grid">
           <div class="column"><div class="ui raised segment">
-            <h3 class="head"><a href="https://discendo.herokuapp.com">discendo</a></h3>
+            <h3 class="head"><a target="_blank" href="https://demo-graphics.westat.com/watw">Westat@Work</a></h3>
+            <div class="segment-content">
+              <p>Westat@Work will be the main onboarding resource for Westat, a research corporation with over 2000 employees. It consists of four modules with dozens of pages of content and many custom animations and interactions. I was brought on by Westat to build the site based on their designs, and was fully responsible for the implementation and architecture.</p>
+              <img class="segment-picture" src="waw_front-page.png">
+              <p>Westat@Work is a 508 compliant single-page application with a custom routing system handling dozens of pages of content, an object based content management system, a hand-made search engine to sift through that content, and many unique animations and illustrations created using both CSS and SVG. The site was styled entirely with custom CSS organized with the BEM methodology.</p>
+              <br/>
+              <p><strong>Notice:</strong> Westat@Work is currently a work in progress. Though the second module, 'what we do', is largely complete, I am still waiting for content for the other three modules, work on 508 compliance is ongoing, and there are still many small, final details to work out. However, I am immensely proud of the work that I have done so far, and, despite its incomplete state, I still believe that the site demonstrates my technical proficiency.</p>
+              <br/>
+              <h5>Single Page Application</h5>
+              <p>I built Westat@Work as a single-page application using the Vue.js framework, so that all content loads at once and, after the initial page load, users can move through the many simulated 'pages' of the site without any load delay. I implemented a simple, custom router system so that each 'page' is associated with a location hash in the URL, so, even though it's all technically one page, the address bar can be used to navigate directly to content in the site, and the forward and back buttons can be used to navigate within the site.</p>
+              <p>Most 'pages' in the site fall into one of a few categories, design-wise, and new pages in those categories can be created simply by providing the content model with the text and images that go on the page and entering the new page's location hash in the router's page index. Also, because the entire site's content is stored in one model object that is downloaded when the first page is loaded, I was able to easily implement a search function that operates entirely on the front end, without any calls to the server.</p>
+              <h5>Custom Pages, CSS, and SVG</h5>
+              <p>For several pages on the site, the designers envisioned interactions and click events with oddly shaped elements, like gears. The original planning called for different background images to render based on interaction with invisible &lt;div&gt; elements, but, using SVG, I was able to recreate the images as fully interactive, web native elements, resulting in a faster, smoother interaction.</p>
+              <p>On <a target="_blank" href="https://demo-graphics.westat.com/watw/#moduleTwo/subjectAreas/one">this page</a>, the pie pieces and outer gears have hover and click events:</p>
+              <img class="segment-picture" src="waw_subject-areas.png">
+              <p>On <a target="_blank" href="https://demo-graphics.westat.com/watw/#moduleTwo/proposalProcess/one">this page</a>, each gear is a unique element drawn by a custom function that can accept options to modify radius, shape, number of teeth, depth of teeth, and more:</p>
+              <img class="segment-picture" src="waw_proposal-process.png">
+              <p>In another part of the site, the plans called for using a complex pdf timeline of the history of Westat. Using SVG and CSS, I was able to exactly replicate the timeline with web native elements, allowing it to be responsive, animatable, and 508 compliant.</p>
+              <p>As the user scrolls through <a href="https://demo-graphics.westat.com/watw/#moduleOne/legacy/one">the timeline</a>, scroll-based breakpoints trigger animations:</p>
+              <img class="segment-picture" src="waw_timeline.png">
+              <p>Although the site does not use responsive break points, it was implemented entirely with responsive units, so every element should display to scale with the width of the screen it is being viewed on.</p>
+
+            </div>
+          </div></div>
+          <div class="column"><div class="ui raised segment">
+            <h3 class="head"><a target="_blank" href="https://discendo.herokuapp.com">discendo</a></h3>
             <div class="segment-content">
               <p>discendo, from the Latin meaning 'for learning', grew out of my own frustrations with learning management systems, and especially systems for creating and administering online assignments. Although there are a few good systems out there, none of them seem to take into account the facts that most teachers already have dozens, if not hundreds, of carefully crafted and formatted assignments and that the one thing teachers never have enough of is time. discendo allows a user with very basic computer skills to upload a pdf, mark it up in a WYSIWYG editor, and publish the assignment as a web form in just a few minutes.</p>
               <p>Although the assignment tool is the key feature of discendo, the app also includes a broad set of LMS features. An instructor can sort students into classes, give assignments to those classes, track assignment completion, and view class-wide and individual results. Students can search for and join classes, view all assignments or sort them by class, complete assignments, and view their results.</p>
               <embed class="video" src="https://www.youtube.com/embed/T_p0hZ_JkSY" allowfullscreen></embed>
               <h5>Try it out!</h5>
-              <p>discendo is being hosted <a href="https://discendo.herokuapp.com">here.</a> You can create your own account or use my test account: email: wasson@wasson.com, password: password.</p>
+              <p>discendo is being hosted <a target="_blank" href="https://discendo.herokuapp.com">here.</a> You can create your own account or use my test account: email: wasson@wasson.com, password: password.</p>
               <h5>Technical Details</h5>
               <p>The app is built on a Rails backend, with hashed and salted password storage through Devise, Paperclip based image upload and conversion, AWS image hosting, with a Postgres database running on Heroku, and front-end styling with Google's Material Design Light framework.</p>
               <h5>The Assignment Creation Process</h5>
               <p>When the user uploads a pdf, the Paperclip gem, using ImageMagick settings configured to carefully balance storage size with image clarity, converts it to a png image file and saves it to Amazon Web Services. The user is taken to another page where the file is displayed. The user can click on the image to highlight individual questions, and can resize or remove their highlights. Once the user is satisfied, they can submit their assignment. discendo bundles the image together with its name, creator information, and a JSON string that contains the information necessary to reconstitute the highlighted sections. A student can then take the assignment, clicking on the highlighted sections to reveal form inputs, with results that, when submitted, are immediately available to the instructor.</p>
             </div>
           </div></div>
-          <div class="column"><div class="ui raised segment">
-            <h3 class="head"><a href="https://guarded-atoll-54755.herokuapp.com/">Wikly</a></h3>
+          <!-- <div class="column"><div class="ui raised segment">
+            <h3 class="head"><a target="_blank" href="https://guarded-atoll-54755.herokuapp.com/">Wikly</a></h3>
             <div class="segment-content">
               <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
-              <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a></p>
+              <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a target="_blank" href="https://guarded-atoll-54755.herokuapp.com/">here.</a></p>
 
               
               <h5>Calendar Screen</h5>
@@ -80,7 +105,7 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
               <img class="segment-picture" src="wikly_create.png" />
 
             </div>
-          </div></div>
+          </div></div> -->
         </div>
       </div>
 
@@ -91,9 +116,14 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <div class="ui four column padded doubling grid">
           
 
-          <div href="/discendo.html" class="purple column display-modal" data-modal-content="discendo">
+          <!-- <div href="/discendo.html" class="purple column display-modal" data-modal-content="discendo">
             <h3>discendo</h3>
             <p>Rapid, user-friendly web form creation and dissemination</p>
+          </div> -->
+
+          <div href="/discendo.html" class="purple column display-modal" data-modal-content="ed-interactive">
+            <h3>Westat's Educator Interactive</h3>
+            <p>Page designed as a sales piece for a touch screen kiosk</p>
           </div>
 
           <div href="/wikly.html" class="red column display-modal" data-modal-content="wikly">
@@ -144,7 +174,7 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <div class="ui raised segment" id="modal">
       <div id="content-resume">
           <h3>My Resume</h3>
-          <a href="./Resume1.pdf">Full Screen</a>
+          <a target="_blank" href="./Resume1.pdf">Full Screen</a>
           <embed src="./Resume1.pdf"></embed>
       </div>
       <div id="modal-close-button" class="close ui icon button">
@@ -164,6 +194,21 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     </div>
 
 
+    <div id="modal-content-ed-interactive">
+      <div id="content-ed-interactive" class="modal-content">
+        <h3>Westat's Educator Interactive</h3>
+        <h4>Page designed as a sales piece for a touch screen kiosk</h4>
+        <p>I worked with designers at Westat, a large corporate research organization, to create this site to advertise Westat's experience and expertise in the field of educational research. I created two versions: one optimized to work on a large touchscreen kiosk at conferences, and another for display on Westat's website.</p>
+        <p>The project gave me experience building touch responsive sites, using designers' specs and giving them feedback on best practices for the web, using JavaScript and CSS to greatly restrict what a user can do on a page (as is appropriate for a kiosk), building and modifying a site with 508 compliance in mind, and building timing based scripts to slowly cycle through the content on a page.</p>
+        <a target="_blank" href="https://demo-graphics.westat.com/educator_interactive">Click here to go to the site.</a><br/>
+        <h4>Front Page</h4>
+        <img class="segment-picture" src="edInt_front.png" />
+        <h4>Interior Page</h4>
+        <img class="segment-picture" src="edInt_interior.png" />
+      </div>
+    </div>
+
+
     <div id="modal-content-discendo">
       <div id="content-discendo" class="modal-content">
           <h3>discendo</h3>
@@ -171,7 +216,7 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
           <p>Although the assignment tool is the key feature of discendo, the app also includes a broad set of LMS features. An instructor can sort students into classes, give assignments to those classes, track assignment completion, and view class-wide and individual results. Students can search for and join classes, view all assignments or sort them by class, complete assignments, and view their results.</p>
           <iframe width="490" height="276" src="https://www.youtube.com/embed/T_p0hZ_JkSY" frameborder="0" allowfullscreen></iframe>
           <h5>Try it out!</h5>
-          <p>discendo is being hosted <a href="https://discendo.herokuapp.com">here.</a> You can create your own account or use my test account: email: wasson@wasson.com, password: password.</p>
+          <p>discendo is being hosted <a target="_blank" href="https://discendo.herokuapp.com">here.</a> You can create your own account or use my test account: email: wasson@wasson.com, password: password.</p>
           <h5>Technical Details</h5>
           <p>The app is built on a Rails backend, with hashed and salted password storage through Devise, Paperclip based image upload and conversion, AWS image hosting, with a Postgres database running on Heroku, and front-end styling with Google's Material Design Light framework.</p>
           <h5>The Assignment Creation Process</h5>
@@ -185,7 +230,7 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <h3>Wikly</h3>
         <h4>Weekly calendar app</h4>
         <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
-        <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a href="https://guarded-atoll-54755.herokuapp.com/">here.</a></p>
+        <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a target="_blank" href="https://guarded-atoll-54755.herokuapp.com/">here.</a></p>
 
         
         <h5>Calendar Screen</h5>
@@ -200,7 +245,7 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <h3>Housing Insights Project</h3>
         <h4>Web platform designed to centralize and display subsidized housing data</h4>
         <p>The Housing Insights Project is a collaborative effort between Code For DC and the DC government to create a tool that government officials and other subsidized housing stakeholders can use to access and understand data about subsidized housing in order to work more effectively to preserve the dwindling supply of affordable housing in the District.</p>
-        <p>Ultimately, the project aims to create a web site for accessing and presenting data. I work with the D3 team, creating visualization tools so that stakeholders can more quickly and effectively make decisions on how to allot resources. You can learn more about the project <a href="https://housinginsights.org">here.</a></p>
+        <p>Ultimately, the project aims to create a web site for accessing and presenting data. I work with the D3 team, creating visualization tools so that stakeholders can more quickly and effectively make decisions on how to allot resources. You can learn more about the project <a target="_blank" href="https://housinginsights.org">here.</a></p>
         <p>Below is the first sample chart that we created to demonstrate how D3 might be used to help stakeholders sort and select buildings in the district.</p>
 
         <div id="chart-0-wrapper">
@@ -219,8 +264,8 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <p>In this project, I tried out a few different Rails helpers and plug-ins. From the main job management page, most actions result in a call processed by UJS and AJAX, so that only part of the page is reloaded. I also used Devise to implement secure user management and Paperclip to handle uploading and pulling files.</p>
         <p>Although the project has a lot of features and a fairly complex database schema, I didn't really get around to doing any but the most basic front-end styling.</p>
         <p>If you'd like to check it out but don't want to make your own account, log in with the email <strong>user@email.com</strong> and the password <strong>password</strong>.</p>
-        <a href="https://agile-harbor-50391.herokuapp.com/">Click here to go to the site.</a><br/>
-        <a href="https://github.com/wassona/Shipping-Project">Click here for the Github Repo</a>
+        <a target="_blank" href="https://agile-harbor-50391.herokuapp.com/">Click here to go to the site.</a><br/>
+        <a target="_blank" href="https://github.com/wassona/Shipping-Project">Click here for the Github Repo</a>
 
       </div>
     </div>
@@ -232,8 +277,8 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <p>blogz is a blogging app built on a Sinatra back-end and styled with Semantic UI. Users can create and edit posts and can also follow each other, though that doesn't really do much.</p>
         <p>Although I built out several back-end apps before this, this was the first one I spent much time styling, and also was my first time using a front end framework. I liked the Semantic UI styling of the blog posts so much that reused them on this site.</p>
         <p>If you'd like to check it out but don't want to make your own account, log in with the username <strong>user</strong> and the password <strong>password</strong>.</p>
-        <a href="https://blooming-dawn-73272.herokuapp.com/">Click here to go to the site.</a><br/>
-        <a href="https://github.com/wassona/blogz">Click here for the Github Repo</a>
+        <a target="_blank" href="https://blooming-dawn-73272.herokuapp.com/">Click here to go to the site.</a><br/>
+        <a target="_blank" href="https://github.com/wassona/blogz">Click here for the Github Repo</a>
         <img class="screenshot" src="blogz.png"/>       
       </div>
     </div>
@@ -245,8 +290,8 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <h4>Front end game based on a popular game show</h4>
         <p>This project simulates a round of a popular 3 player game show. Although there are a lot of features I haven't yet implemented, I'm pretty happy with how it turned out.</p>
         <p>The "Sorry, that doesn't work yet. Try again" message indicates that your spin landed on a wheel section that hasn't been implemented yet. Just spin the wheel again to keep going.</p>
-        <a href="./wof/index.html">Click here to open in full screen</a><br/>
-        <a href="https://github.com/wassona/WoF">Click here for the Github Repo</a>
+        <a target="_blank" href="./wof/index.html">Click here to open in full screen</a><br/>
+        <a target="_blank" href="https://github.com/wassona/WoF">Click here for the Github Repo</a>
         <img class="screenshot" src="WoF.png"/>              
       </div>
     </div>
@@ -258,8 +303,8 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <p>This project uses JavaScript and CSS to create a web native version of Beleaguered Castle, a Solitaire variant. If you'd like to play but don't know how, fear not! The rules are included.</p>
         <p>When I was first learning JavaScript, I built a mostly working version of Klondike Solitaire as a side project. At the time, I didn't quite figure out dragging stacks of individually draggable elements, and I haven't gone back to the project. Beleaguered Castle doesn't allow for moving multiple cards at once, so it was ideal for my skillset at the time.</p>
         <p> Shortly afterwards, I was given an assignment in a class to create a timed modal element. Displaying a ruleset for my Solitaire game seemed like an ideal application, so that's the version on display here. I have not yet made it mobile responsive.</p>
-        <a href="./solitaire/game/index.html">Click here to open in full screen</a><br/>
-        <a href="https://github.com/wassona/solitaire">Click here for the Github Repo</a>        
+        <a target="_blank" href="./solitaire/game/index.html">Click here to open in full screen</a><br/>
+        <a target="_blank" href="https://github.com/wassona/solitaire">Click here for the Github Repo</a>        
       </div>
     </div>
 
@@ -269,8 +314,8 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <h4>A simple but attractive clock app</h4>
         <p>This project displays the current time in the center of the screen, formatted to look like a hex color code. The background color changes with the time, though it interprets the time code as a full range rather than the limited set of colors that a literal interpretation would provide. As the background color changes, the text and line colors also change to complement the background.</p>
         <p>By default, the hour corresponds to the red value, the minute corresponds to the green value, and the second corresponds to the blue value. These defaults can be switched with the drag and drop option cards below the clock itself, though this feature does not work in the embedded version.</p>
-        <a href="./clock/index.html">Click here to open in full screen</a><br/>
-        <a href="https://github.com/wassona/clock">Click here for the Github Repo</a>        
+        <a target="_blank" href="./clock/index.html">Click here to open in full screen</a><br/>
+        <a target="_blank" href="https://github.com/wassona/clock">Click here for the Github Repo</a>        
         <embed src="./clock/index.html"></embed>
       </div>
     </div>
