@@ -1,4 +1,5 @@
-const currentPage = document.location.pathname.split('/')[1].split('.')[0];
+const pathParts = document.location.pathname.split('/');
+const currentPage = pathParts[pathParts.length - 1].split('.')[0];
 
 const visited = () => localStorage.getItem(currentPage);
 const addVisited = (el) => visited() ? localStorage.setItem(currentPage, visited() + '|' + el) : localStorage.setItem(currentPage, el);
