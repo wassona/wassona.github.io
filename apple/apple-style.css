@@ -305,6 +305,7 @@ main {
 
 .notepad__line {
 	padding-left: 4.5rem;
+	padding-right: 2rem;
 	font-size: 1.4rem;
 	line-height: 2.8rem;
 	cursor: pointer;
