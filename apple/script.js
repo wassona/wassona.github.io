@@ -1,8 +1,13 @@
 const pathParts = document.location.pathname.split('/');
-const currentPage = pathParts[pathParts.length -1].split('.')[0];
+const currentPage = pathParts[pathParts.length - 1].split('.')[0];
 
-const visited = () => localStorage.getItem(currentPage);
-const addVisited = (el) => visited() ? localStorage.setItem(currentPage, visited() + '|' + el) : localStorage.setItem(currentPage, el);
+function visited() {
+  return localStorage.getItem(currentPage);
+}
+
+function addVisited(el) {
+  visited() ? localStorage.setItem(currentPage, `${visited()}|${el}`) : localStorage.setItem(currentPage, el);
+}
 
 const modalArrays = {
   outdoors: [
@@ -14,21 +19,19 @@ const modalArrays = {
   ],
 };
 
-console.log(currentPage);
-
 document.querySelector(`.header-nav__link--${currentPage}`).classList.add('header-nav__link--active');
 
 let modalOpen = false;
 
-const closeModals = () => {
+function closeModals() {
   modalOpen = false;
-  document.querySelectorAll('.modal--active').forEach((el) => {
+  document.querySelectorAll('.modal--active').forEach(function(el) {
     el.classList.remove('modal--active');
   });
   resumeAnimations();
-};
+}
 
-const openInfoModal = (line) => {
+function openInfoModal(line) {
   closeModals();
   modalOpen = true;
   document.querySelector(`.modal--${line}`).classList.add('modal--active');
@@ -37,37 +40,37 @@ const openInfoModal = (line) => {
     addVisited(line);
   }
   pauseAnimations();
-}
+};
 
-const pauseAnimations = () => {
+function pauseAnimations() {
   document.querySelector('.main__content').classList.add('pause-animations');
 };
 
-const resumeAnimations = () => {
-  if (!modalOpen){
+function resumeAnimations() {
+  if (!modalOpen) {
     document.querySelector('.main__content').classList.remove('pause-animations');
   }
 };
 
-modalArrays[currentPage].forEach((line) => {
-  document.querySelector(`.clickable-image--${line}`).addEventListener('click', () => openInfoModal(line));
+modalArrays[currentPage].forEach(function(line) {
+  document.querySelector(`.clickable-image--${line}`).addEventListener('click', function(){ openInfoModal(line) });
   document.querySelector(`.clickable-image--${line}`).addEventListener('mouseenter', pauseAnimations);
   document.querySelector(`.clickable-image--${line}`).addEventListener('mouseleave', resumeAnimations);
-  document.querySelector(`.notepad__line--${line}`).addEventListener('click', () => openInfoModal(line));
+  document.querySelector(`.notepad__line--${line}`).addEventListener('click', function(){ openInfoModal(line) });
 });
 
-document.querySelectorAll('.close-modal').forEach((el) => {
-  el.addEventListener('click', () => {
+document.querySelectorAll('.close-modal').forEach(function(el) {
+  el.addEventListener('click', function() {
     closeModals();
   });
 });
 
-document.querySelector('.bee-button').addEventListener('click', () => openInfoModal('bee'));
+document.querySelector('.bee-button').addEventListener('click', function(){ openInfoModal('bee') });
 
 if (visited()) {
-  visited().split('|').forEach((el) => {
+  visited().split('|').forEach(function(el) {
     document.querySelector(`.notepad__line--${el}`).classList.add('notepad__line--checked');
-  })
+  });
 }
 
 if (!localStorage.getItem('readInstructions')) {
