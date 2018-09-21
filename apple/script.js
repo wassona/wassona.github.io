@@ -17,6 +17,13 @@ const modalArrays = {
     'together',
     'sock',
   ],
+  class: [
+    'morning',
+    'circle',
+    'snack',
+    'transitions',
+    'nap',
+  ],
 };
 
 document.querySelector(`.header-nav__link--${currentPage}`).classList.add('header-nav__link--active');
@@ -51,6 +58,8 @@ function resumeAnimations() {
     document.querySelector('.main__content').classList.remove('pause-animations');
   }
 };
+
+console.log('c',currentPage);
 
 modalArrays[currentPage].forEach(function(line) {
   document.querySelector(`.clickable-image--${line}`).addEventListener('click', function(){ openInfoModal(line) });

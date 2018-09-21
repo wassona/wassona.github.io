@@ -125,7 +125,6 @@ main {
 	height: 100%;
 	width: 105rem;
 	margin: 0 auto;
-	background-image: url('./assets/Outdoor Scene_Image_bkgrnd.svg');
 	background-size: cover;
 	position: relative;
 	top: 0;
@@ -134,6 +133,14 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.main__content--outdoors {
+	background-image: url('./assets/Outdoor Scene_Image_bkgrnd.svg');
+}
+
+.main__content--class {
+	background-image: url('./assets/Indoor_Scene_Bkgrnd.svg');
 }
 
 .pause-animations *, .pause-animations *::after {
@@ -241,6 +248,81 @@ main {
 .clickable-image--sock::after {
 	top: 7rem;
 	left: 25rem;
+}
+
+.clickable-image--morning {
+	height: 30rem;
+	width: 16.8rem;
+	top: 1rem;
+	left: 16rem;
+	background-image: url('./assets/People_MorningGreetings.svg');
+}
+
+.clickable-image--circle {
+	height: 33rem;
+	width: 48rem;
+	top: 29.6rem;
+	left: 35.5rem;
+	background-image: url('./assets/People_CircleTime.svg');
+}
+
+.clickable-image--snack {
+	height: 29rem;
+	width: 19rem;
+	top: 16.8rem;
+	left: 3rem;
+	background-image: url('./assets/People_MealSnackTime.svg');
+}
+
+.clickable-image--transitions {
+	height: 22rem;
+	width: 17.5rem;
+	top: 10rem;
+	left: 39.4rem;
+	background-image: url('./assets/People_Transitions.svg');
+}
+
+.clickable-image--nap {
+	height: 34rem;
+	width: 29.5rem;
+	top: 37rem;
+	left: 2rem;
+	background-image: url('./assets/People_Naptime.svg');
+}
+
+.clickable-image--plate {
+	top: 12rem;
+	left: 92rem;
+	/* font-size 0; */
+}
+
+.clickable-image--morning::after {
+	top: 2rem;
+	left: 15rem;
+}
+
+.clickable-image--circle::after {
+	top: 5rem;
+	left: 17rem;
+}
+
+.clickable-image--snack::after {
+	top: 4.5rem;
+	left: 9.5rem;
+}
+
+.clickable-image--transitions::after {
+	top: 7.5rem;
+	left: 10.4rem;
+}
+
+.clickable-image--nap::after {
+	top: 7rem;
+	left: 25rem;
+}
+
+.clickable-image--plate::after {
+	display: none;
 }
 
 .bee-button {
@@ -480,6 +562,10 @@ footer {
 
 .extra-bold {
 	font-weight: 900;
+}
+
+.italics {
+	font-style: italic;
 }
 
 @media (max-aspect-ratio: 13/10) {
