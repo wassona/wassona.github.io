@@ -147,7 +147,11 @@ main {
 	background-image: url('./assets/White_Erase_Board_bkgrnd.svg');
 }
 
-.main__content--welcome .notepad {
+.main__content--bulletin {
+	background-image: url('./assets/Cork Board.svg');
+}
+
+.main__content--welcome .notepad, .main__content--bulletin .notepad {
 	visibility: hidden;
 }
 
@@ -400,6 +404,71 @@ main {
 	display: none;
 }
 
+.clickable-image--policies {
+	height: 45rem;
+	width: 35rem;
+	top: 5rem;
+	left: 6rem;
+	background-image: url('./assets/image_Policies.svg');
+}
+
+.clickable-image--calendar {
+	height: 48rem;
+	width: 55rem;
+	top: 10rem;
+	left: 42rem;
+	background-image: url('./assets/image_Calendar.svg');
+}
+
+.clickable-image--assessments {
+	height: 41rem;
+	width: 49rem;
+	top: 30rem;
+	left: 2rem;
+	background-image: url('./assets/image_HA_Assessments.svg');
+}
+
+.clickable-image--toolkit {
+	height: 44rem;
+	width: 37rem;
+	top: 24rem;
+	left: 67rem;
+	background-image: url('./assets/image_Toolkit.svg');
+}
+
+.clickable-image--wellness {
+	height: 13rem;
+	width: 18rem;
+	top: 48rem;
+	left: 55rem;
+	background-image: url('./assets/image_Wellness_Policy.svg');
+}
+
+.clickable-image--policies::after {
+	top: 13.5rem;
+	left: 24rem;
+}
+
+.clickable-image--calendar::after {
+	top: 23.5rem;
+	left: 18rem;
+}
+
+.clickable-image--assessments::after {
+	top: 19rem;
+	left: 41rem;
+}
+
+.clickable-image--toolkit::after {
+	top: 10rem;
+	left: 29.5rem;
+}
+
+.clickable-image--wellness::after {
+	top: 2.5rem;
+	left: 8.5rem;
+}
+
 .bee-button {
 	position: absolute;
 	top: 3rem;
@@ -622,6 +691,30 @@ main {
 	border-left: 1.6em solid transparent;
 }
 
+.modal-button-container {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 1rem;
+}
+
+.modal-button {
+	cursor: pointer;
+	color: #029ab3;
+	width: 16rem;
+	height: 3.5rem;
+	font-size: 1.5rem;
+	background-color: transparent;
+	border: .3rem solid #029ab3;
+	border-radius: .5rem;
+}
+
+.modal-button:hover {
+	background-color: #029ab3;
+	color: white;
+	border-color: white;
+	box-shadow: 0 0 0 .3rem #029ab3;
+}
+
 .welcome-header {
 	position: absolute;
 	top: 10rem;
@@ -742,6 +835,15 @@ main {
 	font-size: 2rem;
 	line-height: 2.2rem;
 	padding: 2rem 6rem;
+}
+
+.bulletin-header {
+	position: absolute;
+	top: 7rem;
+	left: 6rem;
+	width: 100%;
+	color: white;
+	text-align: center;
 }
 
 footer {

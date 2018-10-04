@@ -29,6 +29,13 @@ const modalArrays = {
     'toddlers',
     'preschoolers',
   ],
+  bulletin: [
+    'policies',
+    'calendar',
+    'assessments',
+    'toolkit',
+    'wellness',
+  ],
 };
 
 document.querySelector(`.header-nav__link--${currentPage}`).classList.add('header-nav__link--active');
@@ -130,6 +137,14 @@ if (currentPage === 'welcome') {
     svg.appendChild(text);
     header.style.fontSize = 0;
   })
-  
-  
+}
+
+if (currentPage === 'bulletin') {
+  document.querySelectorAll('.modal-button').forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      console.log('hey')
+      console.log(button.getAttribute('href'))
+      window.open(button.getAttribute('href'));
+    })
+  });
 }
