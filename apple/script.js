@@ -1,5 +1,5 @@
 const pathParts = document.location.pathname.split('/');
-const currentPage = pathParts[pathParts.length - 1].split('.')[0];
+const currentPage = pathParts[pathParts.length - 1].split('.')[0] || 'index';
 
 function visited() {
   return localStorage.getItem(currentPage);
@@ -10,6 +10,7 @@ function addVisited(el) {
 }
 
 const modalArrays = {
+  index: [],
   outdoors: [
     'animals',
     'catching',
@@ -38,7 +39,12 @@ const modalArrays = {
   ],
 };
 
-document.querySelector(`.header-nav__link--${currentPage}`).classList.add('header-nav__link--active');
+if (currentPage === 'index') {
+  const header = document.querySelector('header');
+  header.classList.add('header--index');
+} else {
+  document.querySelector(`.header-nav__link--${currentPage}`).classList.add('header-nav__link--active');
+}
 
 let modalOpen = false;
 
@@ -98,6 +104,7 @@ if (!localStorage.getItem('readInstructions')) {
   document.querySelector('.bee-button').click();
   localStorage.setItem('readInstructions', 'true');
 }
+
 
 if (currentPage === 'welcome') {
   const header = document.querySelector('.welcome-header');
