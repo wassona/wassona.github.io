@@ -240,12 +240,12 @@ main {
 @keyframes pulse {
 	from {
 		/* border: 0rem solid transparent; */
-		box-shadow: 0 0 0 0 white;
+		box-shadow: 0 0 0 0 #e5e5e5;
 		/* transform: translate(0,0); */
 	}
 	to {
 		/* border: .5rem solid transparent; */
-		box-shadow: 0 0 .5rem .5rem white, 0 0 .5rem .5rem white, 0 0 .5rem .5rem white;
+		box-shadow: 0 0 .5rem .5rem #e5e5e5, 0 0 .5rem .5rem #e5e5e5, 0 0 .5rem .5rem #e5e5e5;
 		/* transform: translate(-.5rem, -.5rem); */
 	}
 }
