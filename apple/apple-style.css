@@ -147,7 +147,7 @@ header {
 .header--index .index-title {
 	display: block;
 	color: white;
-	font-size: 3rem;
+	font-size: 2.9rem;
 	padding: 3.5rem 1.5rem 0 0;
 }
 
@@ -253,12 +253,25 @@ main {
 @keyframes pulseGray {
 	from {
 		/* border: 0rem solid transparent; */
-		box-shadow: 0 0 0 0 #f0f5eb;
+		box-shadow: 0 0 0 0 #e5e5e5;
 		/* transform: translate(0,0); */
 	}
 	to {
 		/* border: .5rem solid transparent; */
-		box-shadow: 0 0 .5rem .5rem #f0f5eb, 0 0 .5rem .5rem #f0f5eb, 0 0 .5rem .5rem #f0f5eb;
+		box-shadow: 0 0 .5rem .5rem #e5e5e5, 0 0 .5rem .5rem #e5e5e5, 0 0 .5rem .5rem #e5e5e5;
+		/* transform: translate(-.5rem, -.5rem); */
+	}
+}
+
+@keyframes pulseDarkGray {
+	from {
+		/* border: 0rem solid transparent; */
+		box-shadow: 0 0 0 0 #cccccc;
+		/* transform: translate(0,0); */
+	}
+	to {
+		/* border: .5rem solid transparent; */
+		box-shadow: 0 0 .5rem .5rem #cccccc, 0 0 .5rem .5rem #cccccc, 0 0 .5rem .5rem #cccccc;
 		/* transform: translate(-.5rem, -.5rem); */
 	}
 }
@@ -569,6 +582,7 @@ main {
 .clickable-image--calendar::after {
 	top: 23.5rem;
 	left: 18rem;
+	animation: 2s pulseDarkGray infinite;
 }
 
 .clickable-image--assessments::after {
@@ -579,6 +593,7 @@ main {
 .clickable-image--toolkit::after {
 	top: 10rem;
 	left: 29.5rem;
+	animation: 2s pulseGray infinite;
 }
 
 .clickable-image--wellness::after {
@@ -978,6 +993,33 @@ main {
 	width: 100%;
 	color: white;
 	text-align: center;
+}
+
+.arrow-link {
+	position: absolute;
+	display: block;
+	width: 6rem;
+	height: 6rem;
+	top: 35rem;
+	right: -10rem;
+	font-size: 0;
+	border-right: .3rem solid #029ab3;
+	border-bottom: .3rem solid #029ab3;
+	transform: rotate(-45deg);
+	transition: transform .5s;
+}
+
+.arrow-link--back {
+	left: -10rem;
+	transform: rotate(135deg);
+}
+
+.arrow-link:hover {
+	transform: translateX(2rem) rotate(-45deg);
+}
+
+.arrow-link--back:hover {
+	transform: translateX(-2rem) rotate(135deg);
 }
 
 footer {
