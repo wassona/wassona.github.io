@@ -240,12 +240,12 @@ main {
 @keyframes pulse {
 	from {
 		/* border: 0rem solid transparent; */
-		box-shadow: 0 0 0 0 #e5e5e5;
+		box-shadow: 0 0 0 0 white;
 		/* transform: translate(0,0); */
 	}
 	to {
 		/* border: .5rem solid transparent; */
-		box-shadow: 0 0 .5rem .5rem #e5e5e5, 0 0 .5rem .5rem #e5e5e5, 0 0 .5rem .5rem #e5e5e5;
+		box-shadow: 0 0 .5rem .5rem white, 0 0 .5rem .5rem white, 0 0 .5rem .5rem white;
 		/* transform: translate(-.5rem, -.5rem); */
 	}
 }
@@ -266,12 +266,12 @@ main {
 @keyframes pulseDarkGray {
 	from {
 		/* border: 0rem solid transparent; */
-		box-shadow: 0 0 0 0 #cccccc;
+		box-shadow: 0 0 0 0 #999999;
 		/* transform: translate(0,0); */
 	}
 	to {
 		/* border: .5rem solid transparent; */
-		box-shadow: 0 0 .5rem .5rem #cccccc, 0 0 .5rem .5rem #cccccc, 0 0 .5rem .5rem #cccccc;
+		box-shadow: 0 0 .5rem .5rem #999999, 0 0 .5rem .5rem #999999, 0 0 .5rem .5rem #999999;
 		/* transform: translate(-.5rem, -.5rem); */
 	}
 }
@@ -379,19 +379,19 @@ main {
 .clickable-image--infants::after {
 	top: 4rem;
 	left: 18rem;
-	animation: 2s pulseGray infinite;
+	animation: 2s pulseDarkGray infinite;
 }
 
 .clickable-image--toddlers::after {
 	top: 4rem;
 	left: 18.5rem;
-	animation: 2s pulseGray infinite;
+	animation: 2s pulseDarkGray infinite;
 }
 
 .clickable-image--preschoolers::after {
 	top: 4rem;
 	left: 20rem;
-	animation: 2s pulseGray infinite;
+	animation: 2s pulseDarkGray infinite;
 }
 
 .clickable-image--animals {
@@ -593,7 +593,7 @@ main {
 .clickable-image--toolkit::after {
 	top: 10rem;
 	left: 29.5rem;
-	animation: 2s pulseGray infinite;
+	animation: 2s pulseDarkGray infinite;
 }
 
 .clickable-image--wellness::after {

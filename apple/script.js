@@ -2,11 +2,14 @@ const pathParts = document.location.pathname.split('/');
 const currentPage = pathParts[pathParts.length - 1].split('.')[0] || 'index';
 
 function visited() {
-  return localStorage.getItem(currentPage);
+  if (document.cookie.includes(currentPage + "=") && !document.cookie.includes(currentPage + "=filler")) {
+    return document.cookie.split(currentPage + "=")[1].split(';')[0];
+  }
+  return '';
 }
 
 function addVisited(el) {
-  visited() ? localStorage.setItem(currentPage, `${visited()}|${el}`) : localStorage.setItem(currentPage, el);
+  document.cookie = currentPage + "=" + visited() + el + "|";
 }
 
 const modalArrays = {
@@ -95,14 +98,18 @@ document.querySelectorAll('.close-modal').forEach(function(el) {
 document.querySelector('.bee-button').addEventListener('click', function(){ openInfoModal('bee') });
 
 if (visited()) {
+  console.log(visited())
   visited().split('|').forEach(function(el) {
-    document.querySelector(`.notepad__line--${el}`).classList.add('notepad__line--checked');
+    console.log(el)
+    if (el) {
+      document.querySelector(`.notepad__line--${el}`).classList.add('notepad__line--checked');
+    }
   });
 }
 
-if (!localStorage.getItem('readInstructions')) {
+if (!document.cookie.includes(currentPage + "=")) {
   document.querySelector('.bee-button').click();
-  localStorage.setItem('readInstructions', 'true');
+  document.cookie = currentPage + "=filler";
 }
 
 
