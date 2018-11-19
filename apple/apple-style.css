@@ -718,6 +718,10 @@ main {
 	border-radius: 1rem;
 }
 
+.main__content--index .modal,.main__content--welcome .modal, .main__content--bulletin .modal {
+	border: .2rem solid #029ab3;
+}
+
 .modal--active {
 	display: block;
 }
@@ -725,6 +729,10 @@ main {
 .modal--bee {
 	width: 70rem;
 }
+
+/* .index .modal--bee, .welcome .modal--bee, .bulletin .modal--bee { */
+/* 	border: .2rem solid #029ab3; */
+/* } */
 
 .close-modal {
 	position: absolute;

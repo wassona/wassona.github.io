@@ -49,7 +49,7 @@ if (currentPage === 'index') {
   document.querySelector(`.header-nav__link--${currentPage}`).classList.add('header-nav__link--active');
 }
 
-let modalOpen = false;
+var modalOpen = false;
 
 function closeModals() {
   modalOpen = false;
