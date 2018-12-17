@@ -229,6 +229,7 @@ main {
 	content: '';
 	box-sizing: content-box;
 	position: absolute;
+	display: block;
 	height: 1.2rem;
 	width: 1.2rem;
 	background-color: black;
@@ -718,6 +719,16 @@ main {
 	border-radius: 1rem;
 }
 
+.modal::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+}
+
 .main__content--index .modal,.main__content--welcome .modal, .main__content--bulletin .modal {
 	border: .2rem solid #029ab3;
 }
@@ -729,10 +740,6 @@ main {
 .modal--bee {
 	width: 70rem;
 }
-
-/* .index .modal--bee, .welcome .modal--bee, .bulletin .modal--bee { */
-/* 	border: .2rem solid #029ab3; */
-/* } */
 
 .close-modal {
 	position: absolute;
