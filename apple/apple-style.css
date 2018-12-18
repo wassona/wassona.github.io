@@ -278,7 +278,7 @@ main {
 @keyframes pulseDarkGray {
 	from {
 		/* border: 0rem solid transparent; */
-		box-shadow: 0 0 0 0 #999999;
+		box-shadow: none;
 		border-radius: 0%;
 		/* transform: translate(0,0); */
 	}
