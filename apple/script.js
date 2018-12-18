@@ -109,38 +109,38 @@ if (!document.cookie.includes(currentPage + "=")) {
   document.cookie = currentPage + "=filler";
 }
 
-// if (currentPage === 'welcome') {
-//   var _header = document.querySelector('.welcome-header');
-//   var letters = _header.innerText.split('');
-//   var svg = document.querySelector('.welcome-svg');
-//   var colors = ['#e10000', '#00a2c5', '#689f38', '#fcb614'];
-//   console.log(letters);
-//   svg.style.height = '9rem';
-//   svg.style.width = 9.5 * letters.length + 'rem';
-//   svg.setAttribute('viewBox', '0 0 ' + 9.5 * letters.length + ' 9');
-//
-//   letters.forEach(function (letter, index) {
-//     var pennant = document.createElementNS(svg.namespaceURI, 'polygon');
-//     var text = document.createElementNS(svg.namespaceURI, 'text');
-//     text.setAttribute('font-size', 4);
-//     text.setAttribute('font-weight', 900);
-//     // text.setAttribute('stroke', 'black');
-//     text.setAttribute('fill', 'white');
-//     text.setAttribute('x', 9.65 * index + 3.7);
-//     text.setAttribute('y', 5);
-//     text.setAttribute('text-anchor', 'middle');
-//     // pennant.setAttribute('width', '6.4');
-//     // pennant.setAttribute('height', '9');
-//     pennant.setAttribute('points', '\n      ' + (9.65 * index + .5) + ',0\n      ' + (9.65 * index + 6.9) + ',0\n      ' + (9.65 * index + 6.9) + ',9\n      ' + (9.65 * index + 3.7) + ',6.6\n      ' + (9.65 * index + .5) + ',9\n      ' + (9.65 * index + .5) + ',0\n    ');
-//     pennant.setAttribute('fill', colors[index % colors.length]);
-//     // pennant.setAttribute('stroke', 'black');
-//     // pennant.setAttribute('stroke-width', .2);
-//     text.appendChild(document.createTextNode(letter.toUpperCase()));
-//     svg.appendChild(pennant);
-//     svg.appendChild(text);
-//     _header.style.fontSize = 0;
-//   });
-// }
+if (currentPage === 'welcome') {
+  var _header = document.querySelector('.welcome-header');
+  var letters = _header.innerText.split('');
+  var svg = document.querySelector('.welcome-svg');
+  var colors = ['#e10000', '#00a2c5', '#689f38', '#fcb614'];
+  console.log(letters);
+  svg.style.height = '9rem';
+  svg.style.width = 9.5 * letters.length + 'rem';
+  svg.setAttribute('viewBox', '0 0 ' + 9.5 * letters.length + ' 9');
+
+  letters.forEach(function (letter, index) {
+    var pennant = document.createElementNS(svg.namespaceURI, 'polygon');
+    var text = document.createElementNS(svg.namespaceURI, 'text');
+    text.setAttribute('font-size', 4);
+    text.setAttribute('font-weight', 900);
+    // text.setAttribute('stroke', 'black');
+    text.setAttribute('fill', 'white');
+    text.setAttribute('x', 9.65 * index + 3.7);
+    text.setAttribute('y', 5);
+    text.setAttribute('text-anchor', 'middle');
+    // pennant.setAttribute('width', '6.4');
+    // pennant.setAttribute('height', '9');
+    pennant.setAttribute('points', '\n      ' + (9.65 * index + .5) + ',0\n      ' + (9.65 * index + 6.9) + ',0\n      ' + (9.65 * index + 6.9) + ',9\n      ' + (9.65 * index + 3.7) + ',6.6\n      ' + (9.65 * index + .5) + ',9\n      ' + (9.65 * index + .5) + ',0\n    ');
+    pennant.setAttribute('fill', colors[index % colors.length]);
+    // pennant.setAttribute('stroke', 'black');
+    // pennant.setAttribute('stroke-width', .2);
+    text.appendChild(document.createTextNode(letter.toUpperCase()));
+    svg.appendChild(pennant);
+    svg.appendChild(text);
+    _header.style.fontSize = 0;
+  });
+}
 
 if (currentPage === 'bulletin') {
   document.querySelectorAll('.modal-button').forEach(function (button) {
