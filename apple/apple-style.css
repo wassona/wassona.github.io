@@ -235,6 +235,7 @@ main {
 	background-clip: content-box;
 	border-radius: 100%;
 	animation: 2s pulse infinite;
+	box-shadow: none;
 }
 
 .clickable-image .after {
@@ -278,15 +279,13 @@ main {
 @keyframes pulseDarkGray {
 	from {
 		/* border: 0rem solid transparent; */
-		box-shadow: none;
+		box-shadow: 0 0 0 0 #999999;
 		border-radius: 0%;
-		outline: 0rem #999999;
 		/* transform: translate(0,0); */
 	}
 	to {
 		/* border: .5rem solid transparent; */
 		box-shadow: 0 0 .5rem .5rem #999999, 0 0 .5rem .5rem #999999, 0 0 .5rem .5rem #999999;
-		outline: .5rem #999999;
 		border-radius: 100%;
 		/* transform: translate(-.5rem, -.5rem); */
 	}
