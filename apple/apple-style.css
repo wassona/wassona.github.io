@@ -228,8 +228,19 @@ main {
 .clickable-image::after {
 	content: '';
 	box-sizing: content-box;
-	position: absolute;
-	display: block;
+	position: absolute; display: block;
+	height: 1.2rem;
+	width: 1.2rem;
+	background-color: black;
+	background-clip: content-box;
+	border-radius: 100%;
+	animation: 2s pulse infinite;
+}
+
+.clickable-image .after {
+	content: '';
+	box-sizing: content-box;
+	position: absolute; display: block;
 	height: 1.2rem;
 	width: 1.2rem;
 	background-color: black;
@@ -377,7 +388,7 @@ main {
 	background-image: url('./assets/Preschools_board_small_Rollover.svg');
 }
 
-.clickable-image--infants::after {
+.clickable-image--infants .after {
 	top: 4rem;
 	left: 18rem;
 	animation: 2s pulseDarkGray infinite;
