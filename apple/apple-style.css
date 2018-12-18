@@ -257,7 +257,7 @@ main {
 	}
 	to {
 		/* border: .5rem solid transparent; */
-		box-shadow: 0 0 .5rem .5rem white, 0 0 .5rem .5rem white, 0 0 .5rem .5rem white;
+		box-shadow: 0 0 .5em .5em white, 0 0 .5em .5em white, 0 0 .5em .5em white;
 		/* transform: translate(-.5rem, -.5rem); */
 	}
 }
@@ -279,15 +279,11 @@ main {
 	from {
 		/* border: 0rem solid transparent; */
 		box-shadow: 0 0 0 0 #999999;
-		height: 1.2rem;
-		width: 1.2rem;
 		/* transform: translate(0,0); */
 	}
 	to {
 		/* border: .5rem solid transparent; */
-		box-shadow: 0 0 .5rem .5rem #999999, 0 0 .5rem .5rem #999999, 0 0 .5rem .5rem #999999;
-		height: 2rem;
-		width: 2rem;
+		box-shadow: 0 0 .5em .5em #999999, 0 0 .5em .5em #999999, 0 0 .5em .5em #999999;
 		/* transform: translate(-.5rem, -.5rem); */
 	}
 }
@@ -390,12 +386,6 @@ main {
 
 .clickable-image--preschoolers:hover {
 	background-image: url('./assets/Preschools_board_small_Rollover.svg');
-}
-
-.clickable-image--infants .after {
-	top: 4rem;
-	left: 18rem;
-	animation: 2s pulseDarkGray infinite;
 }
 
 .clickable-image--toddlers::after {
