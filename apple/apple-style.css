@@ -266,7 +266,8 @@ main {
 @keyframes pulseGray {
 	from {
 		/* border: 0rem solid transparent; */
-		box-shadow: 0 0 0 0 #e5e5e5;
+		/* box-shadow: 0 0 0 0 #e5e5e5; */
+		box-shadow: none;
 		/* transform: translate(0,0); */
 	}
 	to {
