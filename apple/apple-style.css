@@ -1036,7 +1036,7 @@ main {
 	transform: translateX(-2rem) rotate(135deg);
 }
 
-footer {
+.footer-links {
 	height: 15rem;
 	border-top: 1rem solid #029ab3;
 	display: flex;
@@ -1062,6 +1062,13 @@ footer {
 .footer-link--heart {
 	background-image: url('assets/logo_HealthyHearts.svg');
 	background-size: 70%;
+}
+
+.footer-text {
+	text-align: center;
+	padding: 0rem 10rem 2rem;
+	font-weight: 100;
+	color: #029ab3;
 }
 
 .extra-bold {
