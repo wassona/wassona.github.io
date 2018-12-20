@@ -49,7 +49,7 @@ header {
 }
 
 .header-link--apple {
-	background-image: url('assets/image_apple.svg');
+	background-image: url('./assets/image_apple.svg');
 	color: white;
 	text-align: center;
 	padding-top: 4rem;
@@ -61,7 +61,7 @@ header {
 
 .header-link--book {
 	color: #0291b3;
-	background-image: url('assets/icon_book.svg');
+	background-image: url('./assets/icon_book.svg');
 	background-repeat: no-repeat;
 	text-align: center;
 	padding: 3.7rem 2rem 0 .4rem;
@@ -69,7 +69,7 @@ header {
 
 .header--index .header-link--book {
 	color: white;
-	background-image: url('assets/icon_book--index.svg');
+	background-image: url('./assets/icon_book--index.svg');
 }
 
 .header-link--score {
@@ -209,7 +209,7 @@ main {
 	left: 49rem;
 	width: 27rem;
 	height: 20rem;
-	background-image: url('assets/apple_stem_leaf.svg');
+	background-image: url('./assets/apple_stem_leaf.svg');
 }
 
 .pause-animations *, .pause-animations *::after {
@@ -669,7 +669,7 @@ main {
 }
 
 .notepad {
-	background-image: url('assets/image_notebook.svg');
+	background-image: url('./assets/image_notebook.svg');
 	background-repeat: no-repeat;
 	position: absolute;
 	top: 43rem;
@@ -698,7 +698,7 @@ main {
 	position: absolute;
 	top: -.2rem;
 	left: 2rem;
-	background-image: url('assets/icon_checkmark.svg');
+	background-image: url('./assets/icon_checkmark.svg');
 	background-repeat: no-repeat;
 	width: 2.8rem;
 	height: 2.8rem;
@@ -812,17 +812,17 @@ main {
 }
 
 .modal--infants, .modal--toddlers, .modal--preschoolers {
-	background-image: url('assets/Infants_board_large.svg');
+	background-image: url('./assets/Infants_board_large.svg');
 	background-color: white;
 	height: 67rem;
 }
 
 .modal--toddlers {
-	background-image: url('assets/Toddlers_board_large.svg');
+	background-image: url('./assets/Toddlers_board_large.svg');
 }
 
 .modal--preschoolers {
-	background-image: url('assets/Preschools_board_large.svg');
+	background-image: url('./assets/Preschools_board_large.svg');
 }
 
 .modal-body p {
@@ -848,7 +848,7 @@ main {
 	left: 0;
 	width: 23rem;
 	height: 100%;
-	background-image: url('assets/image_PopUpBee.svg');
+	background-image: url('./assets/image_PopUpBee.svg');
 	background-repeat: no-repeat;
 	border-top: 4.6em solid transparent;
 	border-left: 1.6em solid transparent;
@@ -1052,15 +1052,15 @@ main {
 }
 
 .footer-link--children {
-	background-image: url('assets/logo_ChildrensCouncil.svg');
+	background-image: url('./assets/logo_ChildrensCouncil.svg');
 }
 
 .footer-link--apple {
-	background-image: url('assets/logo_HealthyApple.svg');
+	background-image: url('./assets/logo_HealthyApple.svg');
 }
 
 .footer-link--heart {
-	background-image: url('assets/logo_HealthyHearts.svg');
+	background-image: url('./assets/logo_HealthyHearts.svg');
 	background-size: 70%;
 }
 
