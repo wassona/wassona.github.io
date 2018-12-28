@@ -1041,6 +1041,10 @@ main {
 	transform: translateX(-2rem) rotate(135deg);
 }
 
+footer {
+	height: 15rem;
+}
+
 .footer-links {
 	height: 15rem;
 	border-top: 1rem solid #029ab3;
