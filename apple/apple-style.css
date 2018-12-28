@@ -22,16 +22,16 @@ header {
 	margin: 0 auto;
 }
 
-.header--index::before {
-	content: '';
-	width: 100%;
-	height: 12rem;
-	display: block;
-	position: absolute;
-	z-index: -1;
-	background-color: #029ab3;
-}
-
+/* .header--index::before { */
+/* 	content: ''; */
+/* 	width: 100%; */
+/* 	height: 12rem; */
+/* 	display: block; */
+/* 	position: absolute; */
+/* 	z-index: -1; */
+/* 	background-color: #029ab3; */
+/* } */
+/*  */
 .header-content {
 	display: flex;
 	flex-wrap: none;
@@ -84,6 +84,19 @@ header {
 	left: 0;
 	padding-top: 3.5rem;
 	text-align: center;
+	z-index: 1;
+}
+
+.header-link--score::before {
+	content: '';
+	position: absolute;
+	top: 2rem;
+	left: 0;
+	height: 4.5rem;
+	width: 100%;
+	background-color: #a5c400;
+	border-radius: 1.2rem;
+	z-index: -1;
 }
 
 .header-link--score::after {
