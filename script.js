@@ -1,5 +1,21 @@
-document.querySelectorAll('.display-modal').forEach(function(el){
+const colors = [
+  'red',
+  'orange',
+  'yellow',
+  'olive',
+  'green',
+  'teal',
+  'blue',
+  'violet',
+  'purple',
+  'pink'
+];
+
+document.querySelectorAll('.display-modal').forEach(function(el, i){
 	el.addEventListener('click', displayModal, false);
+  if (el.classList.contains('sample')) {
+    el.classList.add(colors[i % colors.length]);
+  }
 });
 
 function displayModal(e){

@@ -2,171 +2,139 @@
 <html>
 <head>
 	<title>Alex Wasson</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script type="text/javascript" src="
-https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" type="image/png" href="/favicon_A.ico" sizes="32x32">
 </head>
 <body>
-  <div class="ui vertically divided grid container">
-    <div id="squished" class="row">
-      <div class="eight wide left aligned column">
-        <h1 id="page-head" class="blue-text">Alex Wasson</h1>
-        <h3 class="blue-text subhead">Web Developer</h2>
-        <div class="blue-text">Washington, DC</div>
+  <div class="content">
+
+    <div class="header">
+      <div class="header-block">
+        <h1 class="block-heading">Alex Wasson</h1>
+        <h2 class="block-subheading">Front End Developer</h2>
+        <div>Alexandria, VA</div>
       </div>
-      <div class="eight wide right aligned column">
-        <ul class="header-list">
-          <li><a target="_blank" href="https://github.com/wassona">Github</a></li>
-          <li><a target="_blank" href="https://www.linkedin.com/in/alex-wasson-570512128">LinkedIn</a></li>
-          <li><a target="_blank" class="display-modal" data-modal-content="resume" >Resume</a>
-        </ul>
+      <div class="header-block">
+        <a target="_blank" href="https://github.com/wassona">Github</a>
+        <a target="_blank" href="https://www.linkedin.com/in/alex-wasson-570512128">LinkedIn</a>
+        <a target="_blank" class="display-modal" data-modal-content="resume" >Resume</a>
       </div>
     </div>
 
-      <div class="row"></div> <!--divider -->
-      <div class="ui sixteen wide column">
-        <div class='ui three column stackable grid'>
+    <hr />
 
-           <div class="column" >
-            <div id="photo-frame">
-              <img id="photo" src="alex_1024_cropped.jpg">
-            </div>
-          </div>
+    <div class="intro">
+      <img class="intro-photo" src="alex_1024_cropped.jpg">
 
-          <div class='ui ten wide column'>
-            <h3>About Me</h3>
-            <p>For five years in the classroom, I presented information in concise, engaging, and compelling ways in an effort to create a meaningful impact in the lives of my students. As a web developer, my mission is to bring that impact to a much broader audience by leveraging technology and collaboration.</p>
+      <div class="intro-block">
+        <h3 class="first-heading">About Me</h3>
+        <hr />
+        <p>I am a front end developer comfortable with a variety of frameworks and libraries and especially experienced in custom styling/css, accessibility and 508 compliance, complex data collection and forms, and long-term development of large web applications. I have a background in education, excellent communication skills, and a solid grasp of Bash, Node, and the entire ecosystem of front end tooling. Above all, I love to learn and develop new skills, so even if I haven't worked on your exact stack or problem set, I may still be a great fit.</p>
 
-            <h3>My Experience</h3>
-            <p>After my initial experience at a full stack boot camp, I've worked as a front end developer for most of a year collaborating with designers, UI/UX experts, and back end engineers creating professional, responsive, 508 compliant sites and apps on schedule. On the front-end, I am adept with the core technologies of HTML, CSS, and JavaScript; I've developed attractive, clean websites with Bootstrap, Semantic UI, and MDL; and I've built complex, reliable user experiences with Vue.js, React, D3, and the DOM API. I've also worked with Webpack, Node, and Babel. Though I'm a little rusty on the back-end, I've implemented document conversion and AWS hosting with Paperclip, established secure user management systems using Devise, and built out a variety of Rails and Sinatra based apps using SQLite3 and Postgres databases. I'm experienced in collaborating and tracking versions with Git, test driven development in Ruby, and, through Code For DC, in working on a large, multi-team, stakeholder-driven project.</p>
+        <h3>My Experience</h3>
+        <hr />
+        <p>My experiences as a developer are broad and have given me crucial experience with many tools, especially React and Angular. Among other things, I have built out a large portion of the React-based data collection module of Health and Human Services' grants management platform, have worked as part of an Agile team on a complex Angular site for trucking companies to submit and track federal documentation for international imports, and have developed curriculum for a React professional development course commissioned by American Express. I also have a solid understanding of many other key development tools: I developed insight into the constraints of database design and administration and a solid understanding of both ends of API development through my time in a full stack bootcamp and later work integrating with various back ends; I learned D3 for a volunteer project and was able to use that knowledge to provide accessibility support for the D3 visualizations of the results a large government survey; to make developing a complex but repetitive employee training tool more manageable, I selected and employed Vue.js.</p>
+        <p>My career has also prepared me for many of the challenges that arise in web development. I have worked on large, ongoing projects, coming in during development and learning the structure and idioms of existing codebases, often working with remote team members across timezones, helping break long-term requirements into smaller, extensible solutions. I have also worked on contract for tiny web development shops with a shoestring budget, providing my best advice for how to adapt designs and plans to get the most work done in the fewest number of hours. I have worked on tight deadlines, have quickly diagnosed and resolved breaking issues, and have worked closely with designers, often producing products that look exactly like what the customer expects but sometimes pushing back on those designs when they don't provide the best interactive or responsive experience. I enjoy thoroughly understanding and improving my tools and have written Bash and Node scripts to improve the efficacy of my teams' tooling.</p>
+          <p>*A note on this page: Although I have updated its content and style a bit over the years, its structure and functionality are largely unchanged from when I first built it at the end of my web development bootcamp, and so it does not work in the way it would if I were to make it now. Most egregiously, it is not accessible. A new version is in progress, but it isn't my top priority.</p>
 
+      </div>
+    </div>
 
-          </div>
+    <h3>Featured Projects</h3>
+    <hr />
+    <div class="featured">
+      <div class="featured-block">
+        <h3 class="head"><a target="_blank" href="https://demo-graphics.westat.com/watw">Westat@Work</a></h3>
+        <div class="segment-content">
+          <p>Westat@Work will be the main onboarding resource for Westat, a research corporation with over 2000 employees. It consists of four modules with dozens of pages of content and many custom animations and interactions. I was brought on by Westat to build the site based on their designs, and was fully responsible for the implementation and architecture.</p>
+          <img class="segment-picture" src="waw_front-page.png">
+          <p>Westat@Work is a 508 compliant single-page application with a custom routing system handling dozens of pages of content, an object based content management system, a hand-made search engine to sift through that content, and many unique animations and illustrations created using both CSS and SVG. The site was styled entirely with custom CSS organized with the BEM methodology.</p>
+          <br/>
+          <p><strong>Notice:</strong> Westat@Work is currently a work in progress. Though the second module, 'what we do', is largely complete, I am still waiting for content for the other three modules, work on 508 compliance is ongoing, and there are still many small, final details to work out. However, I am immensely proud of the work that I have done so far, and, despite its incomplete state, I still believe that the site demonstrates my technical proficiency.</p>
+          <br/>
+          <h5>Single Page Application</h5>
+          <p>I built Westat@Work as a single-page application using the Vue.js framework, so that all content loads at once and, after the initial page load, users can move through the many simulated 'pages' of the site without any load delay. I implemented a simple, custom router system so that each 'page' is associated with a location hash in the URL, so, even though it's all technically one page, the address bar can be used to navigate directly to content in the site, and the forward and back buttons can be used to navigate within the site.</p>
+          <p>Most 'pages' in the site fall into one of a few categories, design-wise, and new pages in those categories can be created simply by providing the content model with the text and images that go on the page and entering the new page's location hash in the router's page index. Also, because the entire site's content is stored in one model object that is downloaded when the first page is loaded, I was able to easily implement a search function that operates entirely on the front end, without any calls to the server.</p>
+          <h5>Custom Pages, CSS, and SVG</h5>
+          <p>For several pages on the site, the designers envisioned interactions and click events with oddly shaped elements, like gears. The original planning called for different background images to render based on interaction with invisible &lt;div&gt; elements, but, using SVG, I was able to recreate the images as fully interactive, web native elements, resulting in a faster, smoother interaction.</p>
+          <p>On <a target="_blank" href="https://demo-graphics.westat.com/watw/#moduleTwo/subjectAreas/one">this page</a>, the pie pieces and outer gears have hover and click events:</p>
+          <img class="segment-picture" src="waw_subject-areas.png">
+          <p>On <a target="_blank" href="https://demo-graphics.westat.com/watw/#moduleTwo/proposalProcess/one">this page</a>, each gear is a unique element drawn by a custom function that can accept options to modify radius, shape, number of teeth, depth of teeth, and more:</p>
+          <img class="segment-picture" src="waw_proposal-process.png">
+          <p>In another part of the site, the plans called for using a complex pdf timeline of the history of Westat. Using SVG and CSS, I was able to exactly replicate the timeline with web native elements, allowing it to be responsive, animatable, and 508 compliant.</p>
+          <p>As the user scrolls through <a href="https://demo-graphics.westat.com/watw/#moduleOne/legacy/one">the timeline</a>, scroll-based breakpoints trigger animations:</p>
+          <img class="segment-picture" src="waw_timeline.png">
+          <p>Although the site does not use responsive break points, it was implemented entirely with responsive units, so every element should display to scale with the width of the screen it is being viewed on.</p>
 
         </div>
-      </div>
-
-      <h3 class="head">Featured Projects</h3>
-      <div id="crunched" class="row"></div> <!--divider -->
-      <div class="row">
-        <div class="ui two column stackable grid">
-          <div class="column"><div class="ui raised segment">
-            <h3 class="head"><a target="_blank" href="https://demo-graphics.westat.com/watw">Westat@Work</a></h3>
-            <div class="segment-content">
-              <p>Westat@Work will be the main onboarding resource for Westat, a research corporation with over 2000 employees. It consists of four modules with dozens of pages of content and many custom animations and interactions. I was brought on by Westat to build the site based on their designs, and was fully responsible for the implementation and architecture.</p>
-              <img class="segment-picture" src="waw_front-page.png">
-              <p>Westat@Work is a 508 compliant single-page application with a custom routing system handling dozens of pages of content, an object based content management system, a hand-made search engine to sift through that content, and many unique animations and illustrations created using both CSS and SVG. The site was styled entirely with custom CSS organized with the BEM methodology.</p>
-              <br/>
-              <p><strong>Notice:</strong> Westat@Work is currently a work in progress. Though the second module, 'what we do', is largely complete, I am still waiting for content for the other three modules, work on 508 compliance is ongoing, and there are still many small, final details to work out. However, I am immensely proud of the work that I have done so far, and, despite its incomplete state, I still believe that the site demonstrates my technical proficiency.</p>
-              <br/>
-              <h5>Single Page Application</h5>
-              <p>I built Westat@Work as a single-page application using the Vue.js framework, so that all content loads at once and, after the initial page load, users can move through the many simulated 'pages' of the site without any load delay. I implemented a simple, custom router system so that each 'page' is associated with a location hash in the URL, so, even though it's all technically one page, the address bar can be used to navigate directly to content in the site, and the forward and back buttons can be used to navigate within the site.</p>
-              <p>Most 'pages' in the site fall into one of a few categories, design-wise, and new pages in those categories can be created simply by providing the content model with the text and images that go on the page and entering the new page's location hash in the router's page index. Also, because the entire site's content is stored in one model object that is downloaded when the first page is loaded, I was able to easily implement a search function that operates entirely on the front end, without any calls to the server.</p>
-              <h5>Custom Pages, CSS, and SVG</h5>
-              <p>For several pages on the site, the designers envisioned interactions and click events with oddly shaped elements, like gears. The original planning called for different background images to render based on interaction with invisible &lt;div&gt; elements, but, using SVG, I was able to recreate the images as fully interactive, web native elements, resulting in a faster, smoother interaction.</p>
-              <p>On <a target="_blank" href="https://demo-graphics.westat.com/watw/#moduleTwo/subjectAreas/one">this page</a>, the pie pieces and outer gears have hover and click events:</p>
-              <img class="segment-picture" src="waw_subject-areas.png">
-              <p>On <a target="_blank" href="https://demo-graphics.westat.com/watw/#moduleTwo/proposalProcess/one">this page</a>, each gear is a unique element drawn by a custom function that can accept options to modify radius, shape, number of teeth, depth of teeth, and more:</p>
-              <img class="segment-picture" src="waw_proposal-process.png">
-              <p>In another part of the site, the plans called for using a complex pdf timeline of the history of Westat. Using SVG and CSS, I was able to exactly replicate the timeline with web native elements, allowing it to be responsive, animatable, and 508 compliant.</p>
-              <p>As the user scrolls through <a href="https://demo-graphics.westat.com/watw/#moduleOne/legacy/one">the timeline</a>, scroll-based breakpoints trigger animations:</p>
-              <img class="segment-picture" src="waw_timeline.png">
-              <p>Although the site does not use responsive break points, it was implemented entirely with responsive units, so every element should display to scale with the width of the screen it is being viewed on.</p>
-
-            </div>
-          </div></div>
-          <div class="column"><div class="ui raised segment">
-            <h3 class="head"><a target="_blank" href="https://discendo.herokuapp.com">discendo</a></h3>
-            <div class="segment-content">
-              <p>discendo, from the Latin meaning 'for learning', grew out of my own frustrations with learning management systems, and especially systems for creating and administering online assignments. Although there are a few good systems out there, none of them seem to take into account the facts that most teachers already have dozens, if not hundreds, of carefully crafted and formatted assignments and that the one thing teachers never have enough of is time. discendo allows a user with very basic computer skills to upload a pdf, mark it up in a WYSIWYG editor, and publish the assignment as a web form in just a few minutes.</p>
-              <p>Although the assignment tool is the key feature of discendo, the app also includes a broad set of LMS features. An instructor can sort students into classes, give assignments to those classes, track assignment completion, and view class-wide and individual results. Students can search for and join classes, view all assignments or sort them by class, complete assignments, and view their results.</p>
-              <embed class="video" src="https://www.youtube.com/embed/T_p0hZ_JkSY" allowfullscreen></embed>
-              <h5>Try it out!</h5>
-              <p>discendo is being hosted <a target="_blank" href="https://discendo.herokuapp.com">here.</a> You can create your own account or use my test account: email: wasson@wasson.com, password: password.</p>
-              <h5>Technical Details</h5>
-              <p>The app is built on a Rails backend, with hashed and salted password storage through Devise, Paperclip based image upload and conversion, AWS image hosting, with a Postgres database running on Heroku, and front-end styling with Google's Material Design Light framework.</p>
-              <h5>The Assignment Creation Process</h5>
-              <p>When the user uploads a pdf, the Paperclip gem, using ImageMagick settings configured to carefully balance storage size with image clarity, converts it to a png image file and saves it to Amazon Web Services. The user is taken to another page where the file is displayed. The user can click on the image to highlight individual questions, and can resize or remove their highlights. Once the user is satisfied, they can submit their assignment. discendo bundles the image together with its name, creator information, and a JSON string that contains the information necessary to reconstitute the highlighted sections. A student can then take the assignment, clicking on the highlighted sections to reveal form inputs, with results that, when submitted, are immediately available to the instructor.</p>
-            </div>
-          </div></div>
-          <!-- <div class="column"><div class="ui raised segment">
-            <h3 class="head"><a target="_blank" href="https://guarded-atoll-54755.herokuapp.com/">Wikly</a></h3>
-            <div class="segment-content">
-              <p>Wikly is a calendar app that features a secure user system with hashed and salted password storage, simple avatar uploads, and a quick event creation system. The core of the app is a JavaScript based calendar that displays events that can be updated or deleted, are postioned based on their start and end times, and are colored based on a preset 'urgency' rating.</p>
-              <p>A version of Wikly is currently running on Heroku. You can create your own account or use the test account, email: user@user.com, password: password. Check it out <a target="_blank" href="https://guarded-atoll-54755.herokuapp.com/">here.</a></p>
-
-              
-              <h5>Calendar Screen</h5>
-              <img class="segment-picture" src="wikly_calendar.png" />
-              <h5>Event Creation Screen</h5>
-              <img class="segment-picture" src="wikly_create.png" />
-
-            </div>
-          </div></div> -->
         </div>
-      </div>
-
-      <h3 class="head">More Work Samples</h1>
-      <div id="crunched" class="row"></div> <!--divider -->
-      <!-- projects -->
-      <div class="ui sixteen wide column">
-        <div class="ui four column padded doubling grid">
-          
-
-          <!-- <div  class="purple column display-modal" data-modal-content="discendo">
-            <h3>discendo</h3>
-            <p>Rapid, user-friendly web form creation and dissemination</p>
-          </div> -->
-
-          <div  class="purple column display-modal" data-modal-content="ed-interactive">
-            <h3>Westat's Educator Interactive</h3>
-            <p>Page designed as a sales piece for a touch screen kiosk</p>
+        <div class="featured-block">
+          <h3 class="head"><a target="_blank" href="https://discendo.herokuapp.com">discendo</a></h3>
+          <div class="segment-content">
+            <p>discendo, from the Latin meaning 'for learning', grew out of my own frustrations with learning management systems, and especially systems for creating and administering online assignments. Although there are a few good systems out there, none of them seem to take into account the facts that most teachers already have dozens, if not hundreds, of carefully crafted and formatted assignments and that the one thing teachers never have enough of is time. discendo allows a user with very basic computer skills to upload a pdf, mark it up in a WYSIWYG editor, and publish the assignment as a web form in just a few minutes.</p>
+            <p>Although the assignment tool is the key feature of discendo, the app also includes a broad set of LMS features. An instructor can sort students into classes, give assignments to those classes, track assignment completion, and view class-wide and individual results. Students can search for and join classes, view all assignments or sort them by class, complete assignments, and view their results.</p>
+            <embed class="video" src="https://www.youtube.com/embed/T_p0hZ_JkSY" allowfullscreen></embed>
+            <h5>Try it out!</h5>
+            <p>discendo is being hosted <a target="_blank" href="https://discendo.herokuapp.com">here.</a> You can create your own account or use my test account: email: wasson@wasson.com, password: password.</p>
+            <h5>Technical Details</h5>
+            <p>The app is built on a Rails backend, with hashed and salted password storage through Devise, Paperclip based image upload and conversion, AWS image hosting, with a Postgres database running on Heroku, and front-end styling with Google's Material Design Light framework.</p>
+            <h5>The Assignment Creation Process</h5>
+            <p>When the user uploads a pdf, the Paperclip gem, using ImageMagick settings configured to carefully balance storage size with image clarity, converts it to a png image file and saves it to Amazon Web Services. The user is taken to another page where the file is displayed. The user can click on the image to highlight individual questions, and can resize or remove their highlights. Once the user is satisfied, they can submit their assignment. discendo bundles the image together with its name, creator information, and a JSON string that contains the information necessary to reconstitute the highlighted sections. A student can then take the assignment, clicking on the highlighted sections to reveal form inputs, with results that, when submitted, are immediately available to the instructor.</p>
           </div>
-
-          <div class="red column display-modal" data-modal-content="housing-insights">
-            <h3>Housing Insights Project</h3>
-            <p>Web platform designed to centralize and display affordable housing data</p>
-          </div>
-
-          <div  class="orange column display-modal" data-modal-content="wesdax">
-            <h3>WesDaX Promo</h3>
-            <p>Single Page App promo piece</p>
-          </div>
-
-          <div  class="yellow column display-modal" data-modal-content="shipping">
-            <h3>Shipping Project</h3>
-            <p>A shipping management tool, built to practice implementing various back-end technologies</p>
-          </div>
-
-          <div  class="olive column display-modal" data-modal-content="blogz">
-            <h3>blogz</h3>
-            <p>A Sinatra based micro-blogging app</p>
-          </div>
-
-          <div  class="green column display-modal" data-modal-content="wof">
-            <h3>WoF</h3>
-            <p>Front end game based on a popular game show</p>
-          </div>
-
-          <div  class="teal column display-modal" data-modal-content="solitaire">
-            <h3>Solitaire</h3>
-            <p>An implementation of the Beleaguered Castle variant of Solitaire</p>
-          </div>
-
-          <div  class="blue column display-modal" data-modal-content="clock">
-            <h3>Hex Clock</h3>
-            <p>A simple but attractive clock app</p>
-          </div>
-
         </div>
+    </div>
+
+    <h3 class="head">More Work Samples</h1>
+    <hr />
+    <div class="samples">
+      <div class="sample display-modal" data-modal-content="discendo">
+        <h3>discendo</h3>
+        <p>Rapid, user-friendly web form creation and dissemination</p>
       </div>
 
+      <div  class="sample display-modal" data-modal-content="ed-interactive">
+        <h3>Westat's Educator Interactive</h3>
+        <p>Page designed as a sales piece for a touch screen kiosk</p>
+      </div>
 
+      <div class="sample display-modal" data-modal-content="housing-insights">
+        <h3>Housing Insights Project</h3>
+        <p>Web platform designed to centralize and display affordable housing data</p>
+      </div>
 
+      <div  class="sample display-modal" data-modal-content="wesdax">
+        <h3>WesDaX Promo</h3>
+        <p>Single Page App promo piece</p>
+      </div>
 
+      <div  class="sample display-modal" data-modal-content="shipping">
+        <h3>Shipping Project</h3>
+        <!-- <p>A shipping management tool, built to practice implementing various back&#45;end technologies</p> -->
+        <p>A simple full stack app built to practice various back end tools</p>
+      </div>
+
+      <div  class="sample display-modal" data-modal-content="blogz">
+        <h3>blogz</h3>
+        <p>A Sinatra based micro-blogging app</p>
+      </div>
+
+      <div  class="sample display-modal" data-modal-content="wof">
+        <h3>WoF</h3>
+        <p>Front end game based on a popular game show</p>
+      </div>
+
+      <div  class="sample display-modal" data-modal-content="solitaire">
+        <h3>Solitaire</h3>
+        <p>An implementation of the Beleaguered Castle variant of Solitaire</p>
+      </div>
+
+      <div  class="sample display-modal" data-modal-content="clock">
+        <h3>Hex Clock</h3>
+        <p>A simple but attractive clock app</p>
+      </div>
+
+    </div>
   </div>
 
 
@@ -177,9 +145,7 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
           <a target="_blank" href="./Resume1.pdf">Full Screen</a>
           <embed src="./Resume1.pdf"></embed>
       </div>
-      <div id="modal-close-button" class="close ui icon button">
-        <i class="close icon"></i>
-      </div>
+      <button id="modal-close-button" class="close"></button>
     </div>
   </div>
 
